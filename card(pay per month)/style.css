@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 0;
+    margin: 0;
+    color: #36393f;
+    background: #ecf4ff;
+    font-family: "Poppins", sans-serif;
+}
+
+p, h2 { 
+    margin: 0; 
+}
+
+.background {
+    position: fixed;
+    z-index: -1;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    height: 60vh;
+    transform: rotate(-4deg);
+    background: #0f71ff;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    width: 300px;
+    border-radius: 12px;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.primary {
+    background: #f9f9f9;
+}
+
+.card .price {
+    display: flex;
+    align-items: baseline;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.card .price small {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+ul li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 6px 0;
+}
+
+ul li img {
+    width: 16px;
+}
+
+.card button {
+    display: grid;
+    place-items: center;
+    min-width: 200px;
+    padding: 14px 0;
+    border-radius: 6px;
+    border: 2px solid #0f71ff;
+    background: #ffffff;
+    color: #0f71ff;
+    font-size: inherit;
+    font-family: inherit;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card.primary button {
+    background: #ffffff;
+    color: #0f71ff;
+}
+
+.card button:hover {
+    background-color: #0f71ff;
+    color: #ffffff;
+}
+
+.card.primary button:hover {
+    background-color: #0f71ff;
+    color: #ffffff;
+}
+
+@media (min-width: 660px) {
+    .card {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 960px) {
+    body {
+        padding: 0;
+        flex-direction: row;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    .card {
+        width: 300px;
+        max-width: 300px;
+        margin: 0;
+    }
+
+    .card.primary {
+        order: 2;
+    }
+}
