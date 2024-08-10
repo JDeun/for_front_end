@@ -1,0 +1,120 @@
+:root {
+  /* 색상 및 공통 변수 설정 */
+  --primary: #0969DA;
+  --background: #EDEEF7;
+  --white: #FCFCFC;
+  --navbar-height: 60px;
+}
+
+body {
+  /* 기본 폰트 및 배경 설정 */
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background: var(--background);
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
+  /* 기본 마진 및 패딩 제거 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.team-member {
+  /* 팀 멤버 카드 스타일 */
+  position: relative;
+  z-index: 1;
+  min-height: 3.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  padding: 1rem;
+  align-items: center;
+  background: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+}
+
+.team-member:hover {
+  /* 마우스 호버 시 손 모양 커서 표시 */
+  cursor: grab;
+}
+
+#team-members {
+  /* 팀 멤버 컨테이너 스타일 */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  max-width: 25rem;
+  width: 100%;
+  background: var(--white);
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+}
+
+.social-links {
+  /* 소셜 링크 목록 스타일 */
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin-left: auto;
+  gap: 0.375rem;
+  flex-direction: row;
+}
+
+.social-links img {
+  /* 소셜 아이콘 크기 */
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.team-member-avatar {
+  /* 팀 멤버 아바타 이미지 스타일 */
+  width: 3.75rem;
+  height: 3.75rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-member-name {
+  /* 팀 멤버 이름 섹션 그리드 스타일 */
+  display: grid;
+  gap: 0.125rem;
+}
+
+.team-member-name h3 {
+  /* 팀 멤버 이름 폰트 크기 */
+  font-size: large;
+}
+
+.team-member-name p {
+  /* 팀 멤버 설명 폰트 크기 */
+  font-size: smaller;
+}
+
+.team-member-chosen {
+  /* 선택된 팀 멤버 스타일 */
+  box-shadow: 8px 8px 32px #E1E1E1;
+}
+
+.team-member-drag {
+  /* 드래그 중일 때 스타일 */
+  opacity: 0;
+}
+
+@media (max-width: 400px) {
+  /* 작은 화면용 반응형 디자인 */
+  .social-links {
+    gap: 0.25rem;
+  }
+  .social-links img {
+    height: 1rem;
+    width: 1rem;
+  }
+}

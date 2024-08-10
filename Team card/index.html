@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Team card</title>
+  <!-- 스타일시트 연결 -->
+  <link rel="stylesheet" href="style.css">
+  <!-- 구글 폰트 사용을 위한 프리커넥트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="team-members">
+    <!-- 팀 멤버 정보 섹션 -->
+    <article class="team-member">
+      <!-- 아바타 이미지 -->
+      <img class="team-member-avatar" src="assets/james.jpg" alt="조용은">
+      <!-- 팀 멤버 이름과 설명 -->
+      <div class="team-member-name">
+        <h3>조용은(Cho YongEun/JD'eun)</h3>
+        <p>Full-Stack Developer를 목표로 하는 자</p>
+      </div>
+      <!-- 소셜 링크 목록 -->
+      <ul class="social-links">
+        <li>
+          <!-- 링크드인 버튼 -->
+          <a href="https://www.linkedin.com/in/조용은" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4fcdsIUPUgmbvGaP-RC4RbHYdVtoN_fM8aya_8gOXI2BRtClESO-0_jgWTtKtIVmOQKs&usqp=CAU" alt="LinkedIn">
+          </a>
+        </li>
+        <li>
+          <!-- 인스타그램 버튼 -->
+          <a href="https://www.instagram.com/jd_meekboi/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/640px-Instagram_logo_2022.svg.png" alt="Instagram">
+          </a>
+        </li>
+        <li>
+          <!-- Gmail 버튼 -->
+          <a href="mailto:jdmeekboi@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/800px-Gmail_icon_%282020%29.svg.png" alt="Gmail">
+          </a>
+        </li>
+        <!-- 다른 소셜 링크 추가 가능 -->
+      </ul>
+    </article>
+  </div>
+  
+  <!-- Sortable.js 라이브러리 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <!-- 스크립트 파일 연결 -->
+  <script src="script.js"></script>
+</body>
+</html>

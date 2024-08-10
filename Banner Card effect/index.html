@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오사카 성 카드</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 필요한 경우 여기에 폰트 링크를 추가하세요 -->
+</head>
+<body>
+    <main>
+        <article class="osaka-card">
+            <!-- 이미지와 제목 섹션 -->
+            <div class="assets">
+                <img src="https://assets.codepen.io/605876/osaka-sky.jpeg" alt="오사카 스카이라인" />
+                <h3>Osaka</h3>
+                <img src="https://assets.codepen.io/605876/osaka-tower.png" alt="오사카 성 타워" />
+            </div>
+            
+            <!-- 블러 효과를 위한 레이어 -->
+            <div class="blur">
+                <div>
+                    <div class="layer" style="--index: 1;"></div>
+                    <div class="layer" style="--index: 2;"></div>
+                    <div class="layer" style="--index: 3;"></div>
+                    <div class="layer" style="--index: 4;"></div>
+                    <div class="layer" style="--index: 5;"></div>
+                </div>
+            </div>
+            
+            <!-- 카드 내용 -->
+            <div class="content">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Osaka Castle</span>
+                </p>
+                <p>Osaka, Japan</p>
+            </div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

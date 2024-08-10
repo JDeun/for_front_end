@@ -1,0 +1,60 @@
+/* Bootstrap 5 CSS and icons included */
+:root {
+    --colorPrimaryNormal: #00b3bb; /* 기본 색상 */
+    --colorPrimaryDark: #00979f; /* 어두운 색상 */
+    --colorPrimaryGlare: #00cdd7; /* 밝은 색상 */
+    --colorPrimaryHalf: #80d9dd; /* 반투명 색상 */
+    --colorPrimaryQuarter: #bfecee; /* 연한 색상 */
+    --colorPrimaryEighth: #dff5f7; /* 매우 연한 색상 */
+    --colorPrimaryPale: #f3f5f7; /* 가장 연한 색상 */
+    --colorButtonNormal: #00b3bb; /* 버튼 기본 색상 */
+    --colorButtonHover: #00cdd7; /* 버튼 호버 색상 */
+    --uploadImageSize: 10%; /* 업로드 이미지 크기 조절 */
+}
+
+body {
+    margin: 24px; /* 본문 여백 설정 */
+}
+
+.upload_dropZone {
+    color: #0f3c4b; /* 텍스트 색상 */
+    background-color: var(--colorPrimaryPale); /* 배경 색상 */
+    outline: 2px dashed var(--colorPrimaryHalf); /* 외곽선 스타일 */
+    outline-offset: -12px; /* 외곽선 오프셋 */
+    transition: outline-offset 0.2s ease-out, outline-color 0.3s ease-in-out, background-color 0.2s ease-out; /* 전환 효과 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.upload_dropZone.highlight {
+    outline-offset: -4px; /* 강조 시 외곽선 오프셋 */
+    outline-color: var(--colorPrimaryNormal); /* 강조 시 외곽선 색상 */
+    background-color: var(--colorPrimaryEighth); /* 강조 시 배경 색상 */
+}
+
+.upload_svg {
+    fill: var(--colorPrimaryNormal); /* SVG 색상 */
+}
+
+.btn-upload {
+    color: #fff; /* 버튼 텍스트 색상 */
+    background-color: var(--colorPrimaryNormal); /* 버튼 배경 색상 */
+    text-align: center; /* 버튼 텍스트 중앙 정렬 */
+}
+
+.btn-upload:hover,
+.btn-upload:focus {
+    color: #fff; /* 호버 및 포커스 시 텍스트 색상 */
+    background-color: var(--colorPrimaryGlare); /* 호버 및 포커스 시 배경 색상 */
+}
+
+.upload_gallery {
+    display: flex; /* 가로 정렬을 위해 flexbox 사용 */
+    flex-wrap: wrap; /* 줄 바꿈 허용 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    gap: 1rem; /* 이미지 간 간격 */
+}
+
+.upload_img {
+    width: var(--uploadImageSize); /* 업로드 이미지 크기 조절 */
+    object-fit: contain; /* 이미지 비율 유지 */
+}

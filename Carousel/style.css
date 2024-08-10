@@ -1,0 +1,152 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    overflow-x: hidden;
+    position: relative;
+    background: #000000;
+    color: #ffffff;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Main layout */
+  main {
+    position: relative;
+    min-height: 100vh;
+    padding: min(20vh, 3rem) 2.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Slider styles */
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .bestseller-tag {
+    align-self: flex-start;
+    background-color: #ffd700;
+    color: #000000;
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .slide-content {
+    align-self: flex-end;
+  }
+  
+  .slide-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .slide-content p {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  /* Responsive design */
+  @media screen and (min-width: 960px) {
+    main {
+      flex-direction: row;
+      column-gap: 3rem;
+      padding-inline: 0;
+    }
+  
+    .swiper-slide {
+      height: 400px;
+    }
+  }
+
+
+/* Individual slide styles */
+.swiper-slide--one {
+    background-image: url('https://source.unsplash.com/random/800x600?book');
+}
+
+.swiper-slide--two {
+    background-image: url('https://source.unsplash.com/random/800x600?library');
+}
+
+.swiper-slide--three {
+    background-image: url('https://source.unsplash.com/random/800x600?reading');
+}
+
+.swiper-slide--four {
+    background-image: url('https://source.unsplash.com/random/800x600?bookstore');
+}
+
+.swiper-slide--five {
+    background-image: url('https://source.unsplash.com/random/800x600?literature');
+}
+
+.swiper-slide--six {
+    background-image: url('https://source.unsplash.com/random/800x600?writing');
+}
+
+/* Additional styles to ensure text is readable over images */
+.swiper-slide {
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.bestseller-tag, .slide-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Adjust main layout for better slider view */
+main {
+    padding: 2rem;
+}
+
+@media screen and (min-width: 960px) {
+    main {
+        padding: 4rem;
+    }
+}
+
+/* Swiper specific styles */
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
