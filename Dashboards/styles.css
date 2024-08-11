@@ -1,0 +1,136 @@
+/* 전체 요소에 대한 기본 스타일 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 루트 변수 설정 */
+  :root {
+    --color-bg: #28284e; /* 배경 색상 */
+    --color-text: #fefcff; /* 텍스트 색상 */
+    --gradient: linear-gradient(45deg, #01ebaf, #00a9cd, #6380ff); /* 그라디언트 색상 */
+  }
+  
+  /* 전체 페이지에 대한 스타일 설정 */
+  body {
+    margin: 0;
+    height: 100vh;
+    color: var(--color-text);
+    background: var(--color-bg);
+    font-family: "Poppins", sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 0 30px;
+  }
+  
+  /* 제목에 대한 기본 스타일 설정 */
+  h2, h3 {
+    margin: 0;
+    font-weight: 400;
+  }
+  
+  /* 대시보드 레이아웃 설정 */
+  .dashboard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 두 개의 열로 나누기 */
+    grid-template-rows: repeat(2, 180px); /* 두 개의 행으로 나누기 */
+    gap: 24px; /* 카드 간격 */
+  }
+  
+  /* 화면 너비가 620px 이상일 때 대시보드 레이아웃 변경 */
+  @media (min-width: 620px) {
+    .dashboard {
+      grid-template-columns: repeat(3, 1fr); /* 세 개의 열로 나누기 */
+      grid-template-rows: repeat(2, 180px); /* 두 개의 행으로 나누기 */
+    }
+    .card {
+      min-width: 200px; /* 카드의 최소 너비 설정 */
+    }
+  }
+  
+  /* 카드 스타일 설정 */
+  .card {
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--color-bg);
+    box-shadow: 7px 7px 29px #191931, -7px 7px 29px #37376b; /* 그림자 효과 */
+  }
+  
+  /* 추가 카드 스타일 설정 */
+  .card.more {
+    margin-bottom: 16px;
+  }
+  
+  /* 카드 제목 스타일 설정 */
+  .card h2 {
+    font-size: 16px;
+  }
+  
+  /* 카드 서브 제목 스타일 설정 */
+  .card h3 {
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+  
+  /* 카드 var 태그 스타일 설정 */
+  .card var {
+    font-style: normal;
+    font-size: 38px;
+  }
+  
+  /* 카드 var abbr 태그 스타일 설정 */
+  .card var abbr {
+    font-size: 12px;
+    opacity: 0.4;
+  }
+  
+  /* 주 카드 스타일 설정 */
+  .card.primary {
+    background: var(--gradient);
+  }
+  
+  /* 카드 아이콘 및 진행 상황 스타일 설정 */
+  .card-icon,
+  .card-progress {
+    height: 120px;
+    display: flex;
+  }
+  
+  /* 카드 아이콘 스타일 설정 */
+  .card-icon {
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .card-icon img:last-child {
+    margin-left: auto;
+  }
+  
+  /* 카드 진행 상황 스타일 설정 */
+  .card-progress {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* 진행 바 스타일 설정 */
+  .card progress {
+    display: block;
+    width: 100%;
+    appearance: none;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    height: 8px;
+  }
+  
+  .card progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+  }
+  
+  .card progress::-webkit-progress-value {
+    background: var(--gradient);
+    border-radius: 10px;
+  }
+  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <h2>회원가입</h2>
+        <h3>자격 증명을 입력하세요</h3>
+        
+        <!-- 이메일 입력 필드 -->
+        <div class="input-container">
+            <input type="email" id="email" class="control" placeholder="이메일" required>
+        </div>
+        
+        <!-- 비밀번호 입력 필드 -->
+        <div class="input-container">
+            <input type="password" id="password" class="control" placeholder="비밀번호" required>
+        </div>
+        
+        <!-- 비밀번호 강도 표시 바 -->
+        <div id="bars">
+            <div></div>
+        </div>
+        
+        <!-- 비밀번호 강도 텍스트 -->
+        <div id="strength" class="strength"></div>
+        
+        <!-- 회원가입 버튼 -->
+        <button class="control" onclick="validateForm()">계속</button>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

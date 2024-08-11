@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signup Example</title>
+    <!-- Google Fonts 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Mulish&display=swap" rel="stylesheet">
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 회원가입 폼을 감싸는 컨테이너 -->
+    <div class="signup-wrapper">
+        <h2>Sign Up</h2>
+        <p>Create your own account!</p>
+        <form class="signup-form">
+            <!-- 이메일 입력 필드 -->
+            <input id="email" type="email" placeholder="Your email" required>
+            <!-- 비밀번호 입력 필드 -->
+            <input id="password" type="password" placeholder="Password" required>
+            <!-- 비밀번호 확인 입력 필드 -->
+            <input id="confirm-password" type="password" placeholder="Repeat Password" required>
+            <!-- 비밀번호 강도 표시 컨테이너 -->
+            <div class="power-container">
+                <div id="power-point"></div>
+            </div>
+            <!-- 제출 버튼 -->
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <!-- 외부 JavaScript 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>

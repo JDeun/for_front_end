@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대시보드</title>
+    <!-- 외부 스타일 시트 링크 -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="dashboard">
+        <!-- 대시보드 카드: 환불 -->
+        <div class="card">
+            <img src="more.svg" class="more" alt="자세히 보기"/>
+            <h2>환불</h2>
+            <h3>이번 달</h3>
+            <var>
+                6k
+                <abbr>USD</abbr>
+            </var>
+        </div>
+        <!-- 대시보드 카드: 판매 -->
+        <div class="card primary">
+            <img src="more.svg" class="more" alt="자세히 보기"/>
+            <h2>판매</h2>
+            <h3>이번 달</h3>
+            <var>
+                50k
+                <abbr>USD</abbr>
+            </var>
+        </div>
+        <!-- 대시보드 카드: 이익 -->
+        <div class="card">
+            <img src="more.svg" class="more" alt="자세히 보기"/>
+            <h2>이익</h2>
+            <h3>이번 달</h3>
+            <var>
+                11k
+                <abbr>USD</abbr>
+            </var>
+        </div>
+        <!-- 대시보드 카드: 진행 상황 -->
+        <div class="card">
+            <h2>진행 상황</h2>
+            <div class="card-progress">
+                <progress value="50" max="100"></progress>
+                <var>
+                    16k
+                    <abbr>작업</abbr>
+                </var>
+            </div>
+        </div>
+        <!-- 대시보드 카드: 제품 -->
+        <div class="card">
+            <h2>제품</h2>
+            <div class="card-icon">
+                <img src="cog.svg" alt="제품 아이콘"/>
+                <div>
+                    <h3>총계</h3>
+                    <var>41k</var>
+                </div>
+                <img src="chevron.svg" alt="화살표"/>
+            </div>
+        </div>
+        <!-- 대시보드 카드: 리뷰 -->
+        <div class="card">
+            <h2>리뷰</h2>
+            <div class="card-icon">
+                <img src="heart.svg" alt="리뷰 아이콘"/>
+                <div>
+                    <h3>평가</h3>
+                    <var>71%</var>
+                </div>
+                <img src="chevron.svg" alt="화살표"/>
+            </div>
+        </div>
+    </div>
+    <!-- 자바스크립트 파일 링크 -->
+    <script src="script.js"></script>
+</body>
+</html>

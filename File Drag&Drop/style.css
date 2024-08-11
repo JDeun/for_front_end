@@ -1,0 +1,130 @@
+/* 모든 요소에 대한 기본 스타일 초기화 */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* 전역 CSS 변수 선언 */
+  :root {
+    --primary: #111926; /* 주요 색상 */
+    --white: #fff; /* 흰색 */
+    --background: #F8F8FF; /* 배경 색상 */
+    --gray: #D3D3D3; /* 회색 */
+  }
+  
+  /* 전체 바디 스타일 */
+  body {
+    font-family: 'Work Sans', sans-serif; /* 폰트 설정 */
+    background-color: var(--background); /* 배경 색상 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 전체 높이 */
+    padding: 1rem;
+  }
+  
+  /* 드롭존 박스 스타일 */
+  .dropzone-box {
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; /* 그림자 효과 */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 36rem;
+    width: 100%;
+    background-color: var(--white); /* 흰색 배경 */
+  }
+  
+  /* 드롭존 제목 스타일 */
+  .dropzone-box h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 드롭존 영역 스타일 */
+  .dropzone-area {
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+    min-height: 16rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px dashed var(--primary); /* 점선 테두리 */
+    border-radius: 1rem;
+    color: var(--primary); /* 주요 색상 */
+    cursor: pointer;
+  }
+  
+  /* 파일 입력 요소 스타일 */
+  .dropzone-area [type="file"] {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* 파일 업로드 아이콘 스타일 */
+  .dropzone-area.file-upload-icon svg {
+    height: 5rem;
+    width: 5rem;
+    margin-bottom: 0.5rem;
+    stroke: var(--primary); /* 주요 색상 */
+  }
+  
+  /* 드롭존 영역에 파일이 드래그되었을 때 스타일 */
+  .dropzone--over {
+    border-style: solid; /* 테두리를 실선으로 변경 */
+    background-color: var(--background); /* 배경 색상 변경 */
+  }
+  
+  /* 드롭존 하단의 버튼 영역 스타일 */
+  .dropzone-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--gray); /* 상단에 회색 테두리 */
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* 버튼 기본 스타일 */
+  .dropzone-actions button {
+    flex-grow: 1;
+    min-height: 3rem;
+    font-size: 1.2rem;
+  }
+  
+  /* 리셋 버튼 스타일 */
+  .dropzone-actions button[type='reset'] {
+    background-color: transparent;
+    border: 1px solid var(--gray); /* 회색 테두리 */
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary); /* 주요 색상 */
+    cursor: pointer;
+  }
+  
+  /* 제출 버튼 스타일 */
+  .dropzone-actions button[type='submit'] {
+    background-color: var(--primary); /* 주요 색상 배경 */
+    border: 1px solid var(--primary); /* 주요 색상 테두리 */
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--white); /* 흰색 글씨 */
+    cursor: pointer;
+  }
+  
+  /* 버튼 호버 시 스타일 */
+  .dropzone-actions button:hover {
+    text-decoration: underline;
+  }
+  

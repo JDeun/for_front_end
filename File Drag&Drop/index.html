@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>File Dropzone</title>
+    <!-- Google Fonts 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- 외부 CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 파일 드래그 앤 드롭 영역을 포함하는 폼 -->
+    <form class="dropzone-box">
+        <h2>Upload and attach files</h2> <!-- 업로드 섹션의 제목 -->
+        <p>Attach files to this project</p> <!-- 설명 텍스트 -->
+        
+        <!-- 드롭존 영역 -->
+        <div class="dropzone-area">
+            <div class="file-upload-icon"><!-- svg 아이콘 자리 --></div> <!-- SVG 아이콘을 삽입할 공간 -->
+            <p>Click to upload or drag and drop</p> <!-- 드래그 앤 드롭 안내 텍스트 -->
+            <input type="file" required id="upload-file" name="uploaded-file"> <!-- 파일 입력 필드 -->
+            <p class="message">No Files Selected</p> <!-- 파일 선택 상태 메시지 -->
+        </div>
+        
+        <!-- 폼 동작 버튼들 -->
+        <div class="dropzone-actions">
+            <button type="reset">Cancel</button> <!-- 리셋 버튼 -->
+            <button id="submit-button" type="submit">Save</button> <!-- 제출 버튼 -->
+        </div>
+    </form>
+    
+    <!-- 외부 JavaScript 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>

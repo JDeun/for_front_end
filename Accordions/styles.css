@@ -1,0 +1,117 @@
+/* 전체 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전체 페이지 스타일 */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #3a3544;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+/* 아코디언 컨테이너 스타일 */
+.accordion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    gap: 16px;
+    transition: 0.3s;
+}
+
+/* 아코디언이 hover될 때의 스타일 */
+.accordion:hover {
+    gap: 0;
+}
+
+/* 아코디언 제목 스타일 */
+.accordion h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 45px;
+    border-bottom: 2px solid #fff;
+    white-space: nowrap;
+}
+
+/* 아코디언 항목 기본 스타일 */
+.accordion li {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 80px;
+    border-radius: 50px;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* 아코디언 이미지 스타일 */
+.accordion li img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 아코디언 내용 스타일 */
+.accordion li .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    color: #fff;
+    padding: 15px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.7) 10%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+/* 아코디언 내용 내부 span 스타일 */
+.accordion li .content span {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, 0);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* 아코디언 항목 hover 시 스타일 */
+.accordion li:hover {
+    flex: 0 1 260px;
+    transform: scale(1.1);
+    z-index: 10;
+    opacity: 1;
+}
+
+/* 아코디언 항목 hover 시 내용 표시 */
+.accordion li:hover .content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 아코디언 항목 hover 시 span 표시 */
+.accordion li:hover .content span {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    visibility: visible;
+}

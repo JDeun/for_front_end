@@ -1,0 +1,40 @@
+/* 전체 마진 초기화 */
+body {
+    margin: 0;
+  }
+  
+  /* 각 섹션에 대한 공통 스타일 */
+  section {
+    height: 100vh; /* 섹션 높이를 화면 전체 높이로 설정 */
+    background-attachment: fixed; /* 배경 이미지 고정 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
+    background-size: cover; /* 배경 이미지가 섹션을 덮도록 설정 */
+    display: flex; /* 섹션 내용을 중앙에 배치 */
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif; /* 폰트 설정 */
+  }
+  
+  /* 첫 번째 섹션의 배경 이미지 설정 */
+  section:nth-child(1) {
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/07/16/36/cat-2605502_960_720.jpg"); /* 무료 고양이 이미지 URL */
+  }
+  
+  /* 두 번째 섹션의 배경 이미지 설정 */
+  section:nth-child(2) {
+    background-image: url("https://cdn.pixabay.com/photo/2022/01/18/07/38/cat-6946505_960_720.jpg"); /* 무료 고양이 이미지 URL */
+  }
+  
+  /* 세 번째 섹션의 배경 이미지 설정 */
+  section:nth-child(3) {
+    background-image: url("https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg"); /* 무료 고양이 이미지 URL */
+  }
+  
+  /* 섹션 제목 스타일 */
+  .title {
+    font-size: 3em; /* 폰트 크기 설정 */
+    font-weight: 600; /* 폰트 굵기 설정 */
+    color: white; /* 텍스트 색상을 흰색으로 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+  }
+  
