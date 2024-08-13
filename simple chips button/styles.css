@@ -1,0 +1,79 @@
+/* 변수 정의 */
+:root {
+    --background-color: rgb(245, 214, 219);
+    --chip-background: white;
+    --chip-shadow: rgba(0, 0, 0, 0.1);
+    --apple-color: red;
+    --banana-color: yellow;
+    --orange-color: orange;
+    --animation-duration: 0.5s;
+}
+
+/* 전역 스타일 */
+body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 칩 컨테이너 스타일 */
+.chips-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* 개별 칩 스타일 */
+.chip {
+    overflow: hidden;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: var(--chip-background);
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 0 10px var(--chip-shadow);
+    border: none; /* 버튼 기본 스타일 제거 */
+    font-size: 1em; /* 기본 폰트 크기 설정 */
+}
+
+.chip-text {
+    position: relative;
+    z-index: 2;
+}
+
+.chip-background {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+    transition: width var(--animation-duration) ease; /* 부드러운 전환 효과 추가 */
+}
+
+/* 과일별 배경색 */
+.apple { background: var(--apple-color); }
+.banana { background: var(--banana-color); }
+.orange { background: var(--orange-color); }
+
+/* 활성화 상태 애니메이션 */
+.active {
+    width: 100%;
+}
+
+/* 접근성: 포커스 스타일 */
+.chip:focus {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+/* 호버 효과 */
+.chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--chip-shadow);
+}

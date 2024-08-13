@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Material Icons 추가 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- 배경 요소 -->
+    <div class="background">
+        <!-- 배경 애니메이션 코드는 여기에 추가 -->
+        <!-- 참고: wweb.dev/resources/animated-css-background-generator -->
+    </div>
+
+    <!-- 회원가입 폼 섹션 -->
+    <section class="signup">
+        <h1>Sign Up</h1>
+        <h2>It's quick & simple</h2>
+        <form class="form">
+            <!-- 이름 입력 필드 -->
+            <div class="textbox">
+                <input type="text" id="name" required>
+                <label for="name">Name</label>
+                <span class="material-icons">account_circle</span>
+            </div>
+            
+            <!-- 이메일 입력 필드 -->
+            <div class="textbox">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+                <span class="material-icons">email</span>
+            </div>
+            
+            <!-- 비밀번호 입력 필드 -->
+            <div class="textbox">
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+                <span class="material-icons">lock</span>
+            </div>
+
+            <!-- 로그인 링크 -->
+            <p>
+                Signed up already?
+                <a href="#">Login here</a>
+            </p>
+
+            <!-- 제출 버튼 -->
+            <button type="submit">
+                Join
+                <span class="material-icons">arrow_forward</span>
+            </button>
+        </form>
+    </section>
+</body>
+</html>

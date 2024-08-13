@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진과 설명이 있는 카드</title>
+    <!-- Google Fonts 사전 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter 폰트 로드 -->
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" type="text/css">
+    <!-- 스타일시트 연결 -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- 부동산 카드 컴포넌트 -->
+        <article class="card">
+            <!-- 카드 이미지 섹션 -->
+            <div class="card__preview">
+                <img src="https://cdn.pixabay.com/photo/2021/08/23/01/01/cubic-house-6566406_1280.jpg" alt="Lakeview Elegance 부동산의 전경" />
+                <div class="card__price">
+                    $4,700,000
+                </div>
+            </div>
+            <!-- 카드 콘텐츠 섹션 -->
+            <div class="card__right">
+                <div class="card__content">
+                    <h2 class="card__title">Lakeview Elegance</h2>
+                    <p class="card__address">258 Serenity Lane, Crestwood Hills</p>
+                    <p class="card__description">
+                        Nestled along the tranquil shores of a pristine lake,
+                        Lakeview Lakeside offers an idyllic escape
+                        into nature's embrace...
+                    </p>
+                </div>
+                <footer class="card__footer">
+                    <button class="cta">자세히 보기</button>
+                </footer>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

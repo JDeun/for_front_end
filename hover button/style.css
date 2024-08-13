@@ -1,0 +1,78 @@
+/* 전역 변수 설정 
+   이 변수들을 수정하여 전체적인 디자인을 쉽게 변경할 수 있습니다. */
+   :root {
+    --primary-color: black;          /* 배경 색상 */
+    --button-bg-color: rgba(17, 17, 137, 0.824);  /* 버튼 배경 색상 */
+    --button-border-color: rgb(255, 255, 255);   /* 버튼 테두리 색상 */
+    --button-text-color: #fff;         /* 버튼 텍스트 색상 */
+    --button-font-size: 22px;          /* 버튼 폰트 크기 */
+    --border-width: 2px;               /* 버튼 테두리 두께 */
+    --corner-size: 24px;               /* 버튼 모서리 효과 크기 */
+}
+
+/* 전역 리셋 
+   모든 요소의 기본 여백을 제거하고 박스 크기를 설정합니다. */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 컨테이너 스타일 
+   페이지 전체를 차지하는 flex 컨테이너를 만듭니다. */
+.container {
+    height: 100vh;                     /* 뷰포트 높이의 100%를 차지 */
+    display: flex;                     /* flexbox 레이아웃 사용 */
+    justify-content: center;           /* 가로 중앙 정렬 */
+    align-items: center;               /* 세로 중앙 정렬 */
+    font-family: sans-serif;           /* 기본 폰트 설정 */
+    background: var(--primary-color);  /* 배경색 설정 */
+}
+
+/* 버튼 기본 스타일 */
+.btn {
+    border: none;                      /* 기본 테두리 제거 */
+    padding: 1rem 4rem;                /* 내부 여백 설정 */
+    background: var(--button-bg-color);/* 버튼 배경색 */
+    color: var(--button-text-color);   /* 버튼 텍스트 색상 */
+    font-size: var(--button-font-size);/* 버튼 폰트 크기 */
+    text-transform: uppercase;         /* 텍스트 대문자 변환 */
+    position: relative;                /* 가상 요소 위치 기준점 */
+    cursor: pointer;                   /* 마우스 오버시 커서 변경 */
+}
+
+/* 버튼 왼쪽 상단 모서리 
+   가상 요소를 사용하여 버튼에 테두리 효과를 줍니다. */
+.btn:before {
+    content: "";                       /* 가상 요소 내용 */
+    position: absolute;                /* 버튼 내 절대 위치 */
+    width: var(--corner-size);         /* 모서리 효과 너비 */
+    height: var(--corner-size);        /* 모서리 효과 높이 */
+    top: -10px;                         /* 위쪽 여백 */
+    left: -10px;                        /* 왼쪽 여백 */
+    border-top: var(--border-width) solid var(--button-border-color);    /* 상단 테두리 */
+    border-left: var(--border-width) solid var(--button-border-color);   /* 좌측 테두리 */
+    transition: all 0.15s;             /* 모든 속성에 0.15초 전환 효과 */
+}
+
+/* 버튼 오른쪽 하단 모서리 
+   위와 동일한 방식으로 우측 하단 모서리 효과를 만듭니다. */
+.btn:after {
+    content: "";
+    position: absolute;
+    width: var(--corner-size);
+    height: var(--corner-size);
+    bottom: -10px;                      /* 아래쪽 여백 */
+    right: -10px;                       /* 오른쪽 여백 */
+    border-bottom: var(--border-width) solid var(--button-border-color); /* 하단 테두리 */
+    border-right: var(--border-width) solid var(--button-border-color);  /* 우측 테두리 */
+    transition: all 0.15s;
+}
+
+/* 호버 효과 
+   마우스를 올렸을 때 모서리 효과가 버튼 전체를 감싸도록 합니다. */
+.btn:hover:before,
+.btn:hover:after {
+    height: 100%;                      /* 세로 길이를 버튼 전체로 확장 */
+    width: 100%;                       /* 가로 길이를 버튼 전체로 확장 */
+}

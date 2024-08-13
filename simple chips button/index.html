@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과일 칩 버튼</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <!-- 과일 칩 컨테이너 -->
+        <div class="chips-row" role="group" aria-label="과일 선택">
+            <!-- 바나나 칩 -->
+            <button class="chip" aria-pressed="false">
+                <span class="chip-text">바나나 🍌</span>
+                <span class="chip-background banana" aria-hidden="true"></span>
+            </button>
+            <!-- 사과 칩 -->
+            <button class="chip" aria-pressed="false">
+                <span class="chip-text">사과 🍎</span>
+                <span class="chip-background apple" aria-hidden="true"></span>
+            </button>
+            <!-- 오렌지 칩 -->
+            <button class="chip" aria-pressed="false">
+                <span class="chip-text">오렌지 🍊</span>
+                <span class="chip-background orange" aria-hidden="true"></span>
+            </button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

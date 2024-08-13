@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야자수 배경의 네비게이션 메뉴</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 햄버거 메뉴 버튼 -->
+    <button class="burger" aria-label="메뉴 열기" aria-expanded="false" onclick="toggleMenu()">
+        <span class="burger-icon"></span>
+    </button>
+
+    <!-- 배경 오버레이 -->
+    <div class="background" aria-hidden="true"></div>
+
+    <!-- 네비게이션 메뉴 -->
+    <nav class="menu" aria-label="메인 네비게이션">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <!-- 추가 링크들 -->
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

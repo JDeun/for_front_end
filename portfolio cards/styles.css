@@ -1,0 +1,273 @@
+/* Google Fonts에서 Montserrat 폰트 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* 전역 변수 설정 - 색상 및 기타 공통 값 정의 */
+:root {
+    --bg-color: #000000;
+    --card-bg: #0a0a0a;
+    --text-color: #ffffff;
+    --accent-color: #a0a0a0;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 기본 스타일 리셋 및 박스 모델 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 바디 기본 스타일 설정 */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    overflow-x: hidden;
+}
+
+/* 헤더 스타일 */
+header {
+    margin-bottom: 50px;
+}
+
+/* 메인 제목 스타일 */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    animation: glitchEffect 5s infinite;
+}
+
+/* 글리치 효과 애니메이션 정의 */
+@keyframes glitchEffect {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* 카드 그리드 레이아웃 */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* 개별 카드 스타일 */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    height: 300px;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* 각 카드의 등장 애니메이션 지연 설정 */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+/* 카드 호버 효과 */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+/* 카드 내용 스타일 */
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+/* 카드 이미지 스타일 */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: filter 0.5s ease;
+}
+
+/* 카드 호버 시 이미지 효과 */
+.card:hover img {
+    filter: blur(5px) brightness(0.3);
+}
+
+/* 카드 제목 스타일 */
+.card-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 카드 설명 스타일 */
+.card-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+}
+
+/* 카드 호버 시 제목 효과 */
+.card:hover .card-title {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* 카드 호버 시 설명 효과 */
+.card:hover .card-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 카드 글래스모피즘 효과 */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+/* 카드 등장 애니메이션 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* GitHub 버튼 스타일 */
+.github-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* 카드 호버 시 GitHub 버튼 표시 */
+.card:hover .github-button {
+    opacity: 1;
+}
+
+/* GitHub 버튼 호버 효과 */
+.github-button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* 연락처 카드 스타일 */
+.contact-card .card-content {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 연락처 아이콘 스타일 */
+.contact-icon {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* 연락처 아이콘 호버 효과 */
+.contact-icon:hover {
+    transform: scale(1.2);
+    color: var(--accent-color);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: 250px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-description {
+        font-size: 0.9rem;
+    }
+
+    .github-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        opacity: 0;
+        transition: opacity 0.5s ease, background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+
+    .contact-icon {
+        font-size: 2rem;
+    }
+}

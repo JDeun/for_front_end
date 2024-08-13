@@ -1,0 +1,160 @@
+/* 변수 정의 */
+:root {
+    --bg-color: #000000;
+    --dot-color: #ffffff;
+    --shadow-color: rgba(90, 90, 90, 0.2);
+    --text-color: #333;
+    --dot-size: 20px;
+    --dot-margin: 15px;
+    --animation-duration: 1.2s;
+}
+
+/* 전역 스타일 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 바디 스타일 */
+body {
+    background: var(--bg-color);
+    font-family: Arial, sans-serif;
+}
+
+/* 로딩 애니메이션 컨테이너 */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 로더 스타일 */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 80px;
+}
+
+/* 로딩 점 컨테이너 */
+.loading-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 var(--dot-margin);
+}
+
+/* 점 스타일 */
+.dot {
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    background-color: var(--dot-color);
+    animation: bounce var(--animation-duration) ease-in-out infinite;
+}
+
+/* 뭉개지는 효과 스타일 */
+.squish {
+    width: var(--dot-size);
+    height: calc(var(--dot-size) / 4);
+    background-color: var(--dot-color);
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    animation: squish var(--animation-duration) ease-in-out infinite;
+}
+
+/* 그림자 스타일 */
+.shadow {
+    width: calc(var(--dot-size) * 0.8);
+    height: calc(var(--dot-size) * 0.2);
+    background-color: var(--shadow-color);
+    border-radius: 50%;
+    margin-top: 5px;
+    filter: blur(2px);
+    animation: shadow var(--animation-duration) ease-in-out infinite;
+}
+
+/* 각 로딩 점의 애니메이션 지연 */
+.loading-dot:nth-child(2) .dot,
+.loading-dot:nth-child(2) .squish,
+.loading-dot:nth-child(2) .shadow {
+    animation-delay: 0.1s;
+}
+.loading-dot:nth-child(3) .dot,
+.loading-dot:nth-child(3) .squish,
+.loading-dot:nth-child(3) .shadow {
+    animation-delay: 0.2s;
+}
+.loading-dot:nth-child(4) .dot,
+.loading-dot:nth-child(4) .squish,
+.loading-dot:nth-child(4) .shadow {
+    animation-delay: 0.3s;
+}
+
+/* 로딩 텍스트 스타일 */
+.loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--text-color);
+    animation: fade 1.5s ease-in-out infinite alternate;
+}
+
+/* 점 바운스 애니메이션 */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-30px) scale(1.5);
+    }
+    75% {
+        transform: translateY(5px) scale(0.5);
+    }
+}
+
+/* 뭉개지는 효과 애니메이션 */
+@keyframes squish {
+    0%, 50%, 100% {
+        transform: scale(1, 0.1);
+        opacity: 0;
+    }
+    75% {
+        transform: scale(1.2, 0.3);
+        opacity: 1;
+    }
+}
+
+/* 그림자 애니메이션 */
+@keyframes shadow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+}
+
+/* 텍스트 페이드 애니메이션 */
+@keyframes fade {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+    :root {
+        --dot-size: 15px;
+        --dot-margin: 10px;
+    }
+    .loading-text {
+        font-size: 16px;
+    }
+}

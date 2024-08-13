@@ -1,0 +1,153 @@
+/* 변수 정의 */
+:root {
+    --menu-bg-color: rgba(0, 0, 0, 0.8);
+    --text-color: #f9f9f9;
+    --menu-item-size: 32px;
+    --menu-transition: 0.4s;
+    --overlay-transition: 0.6s;
+}
+
+/* 전역 스타일 */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+/* 햄버거 메뉴 버튼 스타일 */
+.burger {
+    position: fixed;
+    z-index: 4;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.burger-icon,
+.burger-icon::before,
+.burger-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--text-color);
+    left: 15px;
+    transition: all 0.3s ease;
+}
+
+.burger-icon {
+    top: 29px;
+}
+
+.burger-icon::before {
+    top: -8px;
+}
+
+.burger-icon::after {
+    top: 8px;
+}
+
+body.open .burger-icon {
+    background-color: transparent;
+}
+
+body.open .burger-icon::before {
+    transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+
+body.open .burger-icon::after {
+    transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
+
+/* 배경 오버레이 스타일 */
+.background {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: var(--overlay-transition);
+}
+
+body.open .background {
+    background: var(--menu-bg-color);
+}
+
+/* 메뉴 컨테이너 스타일 */
+.menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    padding-left: 100px;
+}
+
+body.open .menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 메뉴 아이템 스타일 */
+.menu a {
+    position: relative;
+    color: var(--text-color);
+    font-size: var(--menu-item-size);
+    padding: 20px 0;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--menu-transition), transform var(--menu-transition);
+}
+
+body.open .menu a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.open .menu a:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+body.open .menu a:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+/* 호버 효과 */
+.menu a:hover {
+    color: #4a90e2;
+}
+
+.menu a::after {
+    content: '>';
+    position: absolute;
+    right: -20px;
+    opacity: 0;
+    transition: opacity 0.3s, right 0.3s;
+}
+
+.menu a:hover::after {
+    opacity: 1;
+    right: -30px;
+}
