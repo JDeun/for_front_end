@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form class="my-form">
+        <div class="login-welcome-row">
+            <a href="#" title="Logo">
+                <img src="assets/logo.svg" alt="Logo" class="logo">
+            </a>
+            <h1>로그인 후 서비스를 이용하세요</h1>
+        </div>
+        <div class="socials-row">
+            <a href="#" title="Use Google" class="google-sign-in">
+                <img src="https://w7.pngwing.com/pngs/506/509/png-transparent-google-company-text-logo.png" alt="Google" class="google-logo">
+                <span>Google로 로그인</span>
+            </a>
+            <!-- 다른 소셜 로그인 버튼 추가 가능 -->
+        </div>
+        <div class="lines">
+            <div class="line"></div>
+            또는
+            <div class="line"></div>
+        </div>
+        <div class="text-field">
+            <label for="email">이메일</label>
+            <input
+                type="email" id="email" name="email"
+                autocomplete="off" placeholder="you@example.com"
+                required>
+            <div class="error-message">이메일 형식이 올바르지 않습니다.</div>
+        </div>
+        <div class="text-field">
+            <label for="password">비밀번호</label>
+            <input
+                type="password" id="password" name="password"
+                autocomplete="off" placeholder="********"
+                required>
+            <div class="error-message">비밀번호를 입력하세요.</div>
+        </div>
+        <button type="submit" class="my-form_button">
+            로그인
+        </button>
+        <div class="my-form_actions">
+            <div class="my-form_row">
+                <span>계정이 없으신가요?</span>
+                <a href="#" title="Create Account">
+                    회원가입
+                </a>
+            </div>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
