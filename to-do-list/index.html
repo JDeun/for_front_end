@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할 일 목록 앱</title>
+    <!-- Font Awesome 아이콘 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- 사용자 정의 스타일시트 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="app">
+            <!-- 날짜 및 통계 정보 섹션 -->
+            <header class="info">
+                <div class="date-display">
+                    <p class="date-month" id="month">1월</p>
+                    <p class="date-day"><span id="today">일요일</span>, <span id="daymonth">30일</span></p>
+                </div>
+                <div class="info-bottom">
+                    <div class="left">
+                        <p id="count">0</p>
+                        <p id="tasks">전체</p>
+                    </div>
+                    <div class="middle">
+                        <p id="remaining_done">0</p>
+                        <p id="remaining_tasks">남음</p>
+                    </div>
+                    <div class="right">
+                        <p id="count_done">0</p>
+                        <p id="tasks_done">완료</p>
+                    </div>
+                </div>
+            </header>
+            <!-- 할 일 목록 -->
+            <main>
+                <h2 id="today2">오늘의 <strong>할 일</strong></h2>
+                <ul id="task-list">
+                    <!-- 할 일 항목들이 여기에 동적으로 추가됩니다 -->
+                </ul>
+            </main>
+            <!-- 새 할 일 추가 입력 필드 및 버튼 -->
+            <footer>
+                <input type="text" id="new-task-input" placeholder="새 할 일을 입력하세요">
+                <button id="add-task-btn">추가</button>
+            </footer>
+        </div>
+    </div>
+    <!-- 사용자 정의 JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

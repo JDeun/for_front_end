@@ -1,0 +1,352 @@
+/* 기본 스타일 및 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif; /* 한글 지원 폰트 */
+    background-color: #f0f4f8; /* 밝은 배경색 */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 앱 컨테이너 스타일 */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app {
+    width: 100%;
+    max-width: 400px; /* 최대 너비 설정 */
+    background-color: #ffffff;
+    border-radius: 15px; /* 둥근 모서리 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    overflow: hidden;
+}
+
+/* 헤더 (날짜 및 통계) 스타일 */
+.info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 그라데이션 배경 */
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.date-display {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.date-day {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.date-month {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+#today, #daymonth {
+    display: inline-block;
+}
+
+/* 날짜 표시 스타일 */
+.date {
+    margin-bottom: 15px;
+}
+
+#day {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#month {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+#today, #daymonth {
+    display: inline-block;
+}
+
+/* 통계 정보 스타일 */
+.info-bottom {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.info-bottom p:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.info-bottom p:last-child {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* 메인 콘텐츠 영역 */
+main {
+    padding: 20px;
+}
+
+#today2 {
+    text-align: center;
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+/* 할 일 목록 스타일 */
+#task-list {
+    list-style-type: none;
+}
+
+/* 개별 할 일 항목 스타일 */
+.task-item {
+    display: flex;
+    align-items: center;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease, background-color 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.task-item:hover {
+    background-color: #edf2f7;
+    transform: translateY(-2px); /* 호버 시 약간 위로 이동 */
+}
+
+/* 완료된 할 일 스타일 */
+.task-item.completed {
+    background-color: #ebf8ff; /* 연한 파란색 배경 */
+}
+
+/* 파란색으로 차오르는 애니메이션을 위한 가상 요소 */
+.task-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4299e1; /* 진한 파란색 */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.task-item.completed::before {
+    opacity: 0.2; /* 완료 시 불투명도 증가 */
+}
+
+/* 체크 버튼과 삭제 버튼 스타일 */
+.check-button, .delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #a0aec0;
+    transition: color 0.3s ease;
+}
+
+.check-button:hover, .delete-button:hover {
+    color: #4a5568;
+}
+
+.task-item.completed .check-button {
+    color: #4299e1; /* 완료 시 체크 버튼 색상 변경 */
+}
+
+/* 할 일 내용 스타일 */
+.task-content {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.task-content p {
+    margin: 0;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.task-content p:focus {
+    outline: none;
+    background-color: #ebf4ff;
+}
+
+/* 완료된 할 일 텍스트 스타일 */
+.task-item.completed .task-content p {
+    color: #4a5568;
+    text-decoration: line-through;
+}
+
+/* 새 할 일 입력 영역 */
+footer {
+    padding: 20px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+}
+
+#new-task-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* 새 할 일 입력 영역 */
+#add-task-btn {
+    padding: 10px 20px;
+    background-color: #667eea;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+    background-color: #5a67d8; /* 호버 시 색상 변경 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+    .app {
+        max-width: 100%;
+        border-radius: 0; /* 모바일에서는 모서리를 각지게 */
+    }
+
+    .info {
+        padding: 20px 10px;
+    }
+
+    #day {
+        font-size: 1.3em;
+    }
+
+    #month {
+        font-size: 1em;
+    }
+
+    .info-bottom p:first-child {
+        font-size: 1.3em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .task-item {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    #new-task-input, #add-task-btn {
+        font-size: 0.9em;
+    }
+}
+
+/* 접근성을 위한 포커스 스타일 */
+button:focus, input:focus {
+    outline: 2px solid #4299e1;
+    outline-offset: 2px;
+}
+
+/* 애니메이션 효과 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.task-item {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* 스크롤바 스타일링 (옵션) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 드래그 선택 스타일 */
+::selection {
+    background: #667eea;
+    color: white;
+}
+
+/* 추가 기능 버튼 스타일 (옵션) */
+.action-btn {
+    padding: 8px 15px;
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.action-btn:hover {
+    background-color: #2d3748;
+}
+
+/* 툴팁 스타일 (옵션) */
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+[data-tooltip]:hover:before {
+    opacity: 1;
+    visibility: visible;
+}

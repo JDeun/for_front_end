@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운트다운 시계</title>
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='wrapper'>
+        <!-- 분 표시 부분 -->
+        <div class='time-part-wrapper'>
+            <div class='time-part minutes tens'>
+                <div class='digit-wrapper'>
+                    <span class='digit'>0</span>
+                    <span class='digit'>9</span>
+                    <span class='digit'>8</span>
+                    <span class='digit'>7</span>
+                    <span class='digit'>6</span>
+                    <span class='digit'>5</span>
+                    <span class='digit'>4</span>
+                    <span class='digit'>3</span>
+                    <span class='digit'>2</span>
+                    <span class='digit'>1</span>
+                    <span class='digit'>0</span>
+                </div>
+            </div>
+            <div class='time-part minutes ones'>
+                <div class='digit-wrapper'>
+                    <span class='digit'>0</span>
+                    <span class='digit'>9</span>
+                    <span class='digit'>8</span>
+                    <span class='digit'>7</span>
+                    <span class='digit'>6</span>
+                    <span class='digit'>5</span>
+                    <span class='digit'>4</span>
+                    <span class='digit'>3</span>
+                    <span class='digit'>2</span>
+                    <span class='digit'>1</span>
+                    <span class='digit'>0</span>
+                </div>
+            </div>
+        </div>
+        <!-- 초 표시 부분 -->
+        <div class='time-part-wrapper'>
+            <div class='time-part seconds tens'>
+                <div class='digit-wrapper'>
+                    <span class='digit'>0</span>
+                    <span class='digit'>9</span>
+                    <span class='digit'>8</span>
+                    <span class='digit'>7</span>
+                    <span class='digit'>6</span>
+                    <span class='digit'>5</span>
+                    <span class='digit'>4</span>
+                    <span class='digit'>3</span>
+                    <span class='digit'>2</span>
+                    <span class='digit'>1</span>
+                    <span class='digit'>0</span>
+                </div>
+            </div>
+            <div class='time-part seconds ones'>
+                <div class='digit-wrapper'>
+                    <span class='digit'>0</span>
+                    <span class='digit'>9</span>
+                    <span class='digit'>8</span>
+                    <span class='digit'>7</span>
+                    <span class='digit'>6</span>
+                    <span class='digit'>5</span>
+                    <span class='digit'>4</span>
+                    <span class='digit'>3</span>
+                    <span class='digit'>2</span>
+                    <span class='digit'>1</span>
+                    <span class='digit'>0</span>
+                </div>
+            </div>
+        </div>
+        <!-- 1/100초 표시 부분 -->
+        <div class='time-part-wrapper'>
+            <div class='time-part hundredths tens'>
+                <div class='digit-wrapper'>
+                    <span class='digit'>0</span>
+                    <span class='digit'>9</span>
+                    <span class='digit'>8</span>
+                    <span class='digit'>7</span>
+                    <span class='digit'>6</span>
+                    <span class='digit'>5</span>
+                    <span class='digit'>4</span>
+                    <span class='digit'>3</span>
+                    <span class='digit'>2</span>
+                    <span class='digit'>1</span>
+                    <span class='digit'>0</span>
+                </div>
+            </div>
+            <div class='time-part hundredths ones'>
+                <div class='digit-wrapper'>
+                    <span class='digit'>0</span>
+                    <span class='digit'>9</span>
+                    <span class='digit'>8</span>
+                    <span class='digit'>7</span>
+                    <span class='digit'>6</span>
+                    <span class='digit'>5</span>
+                    <span class='digit'>4</span>
+                    <span class='digit'>3</span>
+                    <span class='digit'>2</span>
+                    <span class='digit'>1</span>
+                    <span class='digit'>0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 시간 설정 및 컨트롤 버튼 -->
+    <div class="controls">
+        <input type="number" id="hours" min="0" max="23" placeholder="시">
+        <input type="number" id="minutes" min="0" max="59" placeholder="분">
+        <input type="number" id="seconds" min="0" max="59" placeholder="초">
+        <button id="startBtn">시작</button>
+        <button id="resetBtn">리셋</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

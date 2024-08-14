@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 앱 전체 래퍼 -->
+    <div class="app-wrap">
+        <header>
+            <!-- 도시 검색을 위한 입력 필드 -->
+            <input type="text" autocomplete="off" class="search-box" placeholder="도시 이름을 입력하세요" aria-label="도시 검색">
+        </header>
+        <main>
+            <!-- 위치 정보 섹션 -->
+            <section class="location">
+                <h1 class="city">서울, 대한민국</h1>
+                <div class="date">2024년 5월 30일 월요일</div>
+            </section>
+            <!-- 현재 날씨 정보 섹션 -->
+            <section class="current">
+                <div class="temp">15<span>°C</span></div>
+                <div class="weather">맑음</div>
+                <div class="hi-low">13°C / 16°C</div>
+            </section>
+        </main>
+    </div>
+    <!-- JavaScript 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>

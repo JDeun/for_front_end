@@ -1,0 +1,61 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;  /* 선택적: 모서리를 둥글게 만듭니다 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* 선택적: 그림자 효과를 추가합니다 */
+  }
+  
+  .container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 이미지를 컨테이너에 맞게 조정합니다 */
+    transition: all 1s;
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: all 1s;
+    background: rgba(23, 23, 23, 0.8);  /* 배경을 약간 투명하게 만듭니다 */
+    transform: translateX(-100%);
+    text-align: center;  /* 텍스트를 중앙 정렬합니다 */
+    padding: 20px;  /* 내용에 패딩을 추가합니다 */
+    box-sizing: border-box;  /* 패딩을 전체 크기에 포함시킵니다 */
+  }
+  
+  .container:hover .content {
+    transform: translateX(0);
+  }
+  
+  .container:hover img {
+    transform: scale(1.1);  /* 호버 시 이미지를 약간 확대합니다 */
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  h4 {
+    margin-top: 0;
+    opacity: 0.8;
+  }
