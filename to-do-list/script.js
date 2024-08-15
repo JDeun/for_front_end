@@ -25,10 +25,18 @@ function updateDate() {
     const days = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
     const months = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
 
-    document.getElementById('today').textContent = days[now.getDay()];
-    document.getElementById('daymonth').textContent = `${now.getDate()}일`;
-    document.getElementById('month').textContent = months[now.getMonth()];
+    const year = now.getFullYear();
+    const month = months[now.getMonth()];
+    const date = now.getDate();
+    const day = days[now.getDay()];
+
+    const dateString = `${year}년 ${month} ${date}일 ${day}`;
+    document.getElementById('date-display').textContent = dateString;
 }
+
+// 페이지 로드 시 업데이트
+window.onload = updateDate;
+
 
 // 할 일 추가 이벤트 리스너
 addTaskBtn.addEventListener('click', addTask);

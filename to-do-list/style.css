@@ -41,22 +41,17 @@ body {
 .date-display {
     text-align: center;
     margin-bottom: 15px;
+    font-size: 1.2em; /* 날짜 폰트 크기 조정 */
+    font-weight: bold; /* 날짜 폰트 두께 조정 */
 }
 
-.date-day {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 5px;
+#date-display {
+    display: inline-block; /* 한 줄로 표시되도록 설정 */
+    font-size: 1.2em; /* 날짜 폰트 크기 조정 */
+    font-weight: bold; /* 날짜 폰트 두께 조정 */
+    color: #ffffff; /* 텍스트 색상 */
 }
 
-.date-month {
-    font-size: 1.2em;
-    opacity: 0.8;
-}
-
-#today, #daymonth {
-    display: inline-block;
-}
 
 /* 날짜 표시 스타일 */
 .date {

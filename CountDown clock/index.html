@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <h1 class="headline">Count-Down-Timer</h1>
+        <div class="container">
+            <!-- 타이머 표시 -->
+            <div class="timer">
+                <span id="hour">00</span><span>:</span>
+                <span id="minute">00</span><span>:</span>
+                <span id="second">00</span>
+            </div>
+            <!-- 입력 필드 -->
+            <div class="controls">
+                <input id="hourInput" type="number" placeholder="시" min="0">
+                <input id="minuteInput" type="number" placeholder="분" min="0">
+                <input id="secondInput" type="number" placeholder="초" min="0">
+            </div>
+            <!-- 버튼들 -->
+            <div class="buttons">
+                <button id="start">시작</button>
+                <button id="pause">일시정지</button>
+                <button id="reset">리셋</button>
+            </div>
+        </div>
+    </div>
+    <!-- 비디오 요소 -->
+    <script src="script.js"></script>
+</body>
+</html>
