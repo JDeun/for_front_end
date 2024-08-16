@@ -3,7 +3,8 @@ body {
   margin: 0;
   font-family: 'Orbit', sans-serif; /* 폰트 적용 */
   color: #ffffff; /* 텍스트 색상 */
-  background: url('https://cdn.pixabay.com/video/2024/08/06/225173_large.mp4') no-repeat center center fixed; /* 배경 이미지 */
+  background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), /* 반투명 검은색 레이어 */ 
+  url('https://cdn.pixabay.com/video/2024/08/06/225173_large.mp4') no-repeat center center fixed; /* 배경 이미지 */
   background-size: cover;
   display: flex;
   justify-content: center;
