@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>로그인</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="box">
+  <!-- 이메일 입력 필드 -->
+  <div class="input_wrapper">
+    <input
+      id="email"
+      type="email"
+      name="email"
+      placeholder="이메일"
+      required
+      class="input_field"
+    />
+    <label for="email" class="input_label">이메일</label>
+  </div>
+
+  <!-- 비밀번호 입력 필드 -->
+  <div class="input_wrapper">
+    <input
+      id="password"
+      type="password"
+      name="password"
+      placeholder="비밀번호"
+      title="최소 6자, 알파벳 1자와 숫자 1자 포함"
+      pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+      required
+      class="input_field"
+    />
+    <label for="password" class="input_label">비밀번호</label>
+    <img
+      alt="비밀번호 보기 아이콘"
+      title="비밀번호 보기 아이콘"
+      src="assets/eye.svg"
+      class="input_icon"
+    />
+  </div>
+
+  <!-- 로그인 버튼 -->
+  <button class="login_button">로그인</button>
+
+  <!-- 구분선 -->
+  <div class="divider">또는</div>
+
+  <!-- 소셜 로그인 버튼들 -->
+  <div class="social_login">
+    <button class="social_button google">
+      <img src="assets/google.svg" alt="구글 로고" class="social_icon"> 구글 로그인
+    </button>
+    <button class="social_button kakao">
+      <img src="assets/kakao.svg" alt="카카오 로고" class="social_icon"> 카카오 로그인
+    </button>
+    <button class="social_button naver">
+      <img src="assets/naver.svg" alt="네이버 로고" class="social_icon"> 네이버 로그인
+    </button>
+    <button class="social_button apple">
+      <img src="assets/apple.svg" alt="애플 로고" class="social_icon"> 애플 로그인
+    </button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

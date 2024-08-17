@@ -1,0 +1,101 @@
+body {
+  background-color: rgb(243, 226, 229); /* 배경색 설정 */
+  height: 100vh; /* 전체 화면 높이 설정 */
+  display: flex; /* Flexbox 사용 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  margin: 0; /* 기본 여백 제거 */
+}
+
+/* 캐로셀 컨테이너 스타일 */
+.carousel {
+  overflow: hidden; /* 넘치는 내용 숨기기 */
+  width: 600px; /* 캐로셀 너비 설정 */
+}
+
+/* 이미지 카드 감싸는 컨테이너 스타일 */
+.wrap {
+  display: grid; /* Grid 레이아웃 사용 */
+  grid-auto-flow: column; /* 열 방향으로 자동 배치 */
+  grid-auto-columns: 270px; /* 열 너비 설정 (이미지 간격 포함) */
+  gap: 20px; /* 이미지 간의 간격 설정 */
+  justify-items: stretch; /* 아이템을 전체 너비로 설정 */
+  animation: slide 15s linear infinite; /* 애니메이션 설정 */
+}
+
+/* 이미지 스타일 */
+.wrap img {
+  width: 100%; /* 이미지 너비를 부모 요소에 맞춤 */
+  height: 100%; /* 이미지 높이를 부모 요소에 맞춤 */
+  border-radius: 15px; /* 모서리 둥글게 */
+  object-fit: cover; /* 이미지 비율 유지 */
+  transition: opacity 0.3s, filter 0.3s; /* 투명도 및 필터 변경 시 애니메이션 */
+}
+
+/* 이미지 카드 스타일 */
+.slide {
+  position: relative; /* 자식 요소의 위치를 상대적으로 설정 */
+  width: 250px; /* 이미지 카드 너비 설정 */
+  height: 250px; /* 이미지 카드 높이 설정 */
+  overflow: hidden; /* 카드가 넘치는 내용 숨김 */
+}
+
+/* 글라스모피즘 효과 및 설명 텍스트 스타일 */
+.overlay {
+  position: absolute; /* 절대 위치 설정 */
+  top: 0; /* 상단 정렬 */
+  left: 0; /* 왼쪽 정렬 */
+  width: 100%; /* 전체 너비 설정 */
+  height: 100%; /* 전체 높이 설정 */
+  background: rgba(0, 0, 0, 0.3); /* 반투명 흰색 배경 */
+  backdrop-filter: blur(10px); /* 배경 흐림 효과 */
+  display: flex; /* Flexbox 사용 */
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  opacity: 0; /* 초기 상태에서 숨김 */
+  transition: opacity 0.3s; /* 투명도 변경 시 애니메이션 */
+  border-radius: 15px; /* 모서리 둥글게 */
+}
+
+/* 이미지 카드에 호버 시 스타일 */
+.slide:hover .overlay {
+  opacity: 1; /* 호버 시 설명 텍스트 보이기 */
+}
+
+/* 설명 텍스트 스타일 */
+.overlay p {
+  font: 'noto-sans';
+  color: #ffffff; /* 텍스트 색상 설정 */
+  font-size: 1.2rem; /* 글자 크기 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  margin: 0; /* 기본 여백 제거 */
+}
+
+/* 호버 시 이미지 색상 모노톤으로 변경 */
+.slide:hover img {
+  filter: grayscale(100%); /* 이미지 색상 모노톤으로 변경 */
+}
+
+/* 애니메이션 설정 */
+@keyframes slide {
+  to {
+    transform: translateX(calc(-8 * 270px)); /* 마지막 이미지까지 이동 */
+  }
+}
+
+/* 화면 크기가 768px 이하일 때 스타일 설정 */
+@media (max-width: 768px) {
+  .carousel {
+    width: 100%; /* 모바일 화면에서는 캐로셀 너비를 100%로 설정 */
+  }
+  .wrap {
+    grid-auto-columns: 200px; /* 모바일 화면에서는 열 너비를 줄임 */
+  }
+}
+
+/* 화면 크기가 480px 이하일 때 스타일 설정 */
+@media (max-width: 480px) {
+  .wrap {
+    grid-auto-columns: 150px; /* 아주 작은 화면에서는 열 너비를 더 줄임 */
+  }
+}

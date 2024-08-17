@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 반응형 웹 디자인을 위한 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <!-- Google Fonts에서 Poppins 폰트 로드 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome 아이콘 라이브러리 로드 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- 커스텀 CSS 파일 로드 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 전체 컨테이너 -->
+    <div class="container">
+        <!-- 검색 영역 -->
+        <div class="search-container">
+            <!-- 검색 입력 필드 -->
+            <input type="text" id="searchInput" placeholder="음악 검색...">
+            <!-- 검색 버튼 (돋보기 아이콘 사용) -->
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+            <!-- 자동완성 결과를 표시할 리스트 -->
+            <ul id="autocompleteList" class="autocomplete-list"></ul>
+        </div>
+        <!-- 메인 콘텐츠 영역 -->
+        <div class="main-content">
+            <!-- 검색 결과를 표시할 영역 -->
+            <div id="results" class="results"></div>
+            <!-- 음악 플레이어 영역 -->
+            <div class="player">
+                <!-- 앨범 커버 이미지 표시 영역 -->
+                <div id="coverImage" class="cover-image"></div>
+                <!-- 현재 재생 중인 트랙 정보 표시 영역 -->
+                <div id="trackInfo" class="track-info"></div>
+                <!-- 플레이어 컨트롤 버튼 영역 -->
+                <div class="player-controls">
+                    <!-- 10초 뒤로 가기 버튼 -->
+                    <button id="backButton" class="icon-button"><i class="fas fa-backward"></i></button>
+                    <!-- 재생 버튼 -->
+                    <button id="playButton" class="icon-button"><i class="fas fa-play"></i></button>
+                    <!-- 일시정지 버튼 -->
+                    <button id="pauseButton" class="icon-button"><i class="fas fa-pause"></i></button>
+                    <!-- 정지 버튼 -->
+                    <button id="stopButton" class="icon-button"><i class="fas fa-stop"></i></button>
+                    <!-- 10초 앞으로 가기 버튼 -->
+                    <button id="forwardButton" class="icon-button"><i class="fas fa-forward"></i></button>
+                    <!-- 볼륨 조절 영역 -->
+                    <div id="volumeControl" class="volume-control">
+                        <!-- 볼륨 버튼 (스피커 아이콘 사용) -->
+                        <button id="volumeButton" class="icon-button"><i class="fas fa-volume-up"></i></button>
+                        <!-- 볼륨 슬라이더 컨테이너 (기본적으로 숨겨져 있음) -->
+                        <div id="volumeSliderContainer" class="volume-slider-container">
+                            <!-- 수직 볼륨 슬라이더 -->
+                            <input type="range" id="volumeSlider" min="0" max="100" value="50" orient="vertical">
+                            <!-- 현재 볼륨 퍼센트 표시 -->
+                            <div id="volumePercentage" class="volume-percentage">50%</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 재생 진행 상태를 표시하는 프로그레스 바 -->
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+                <!-- 실제 오디오를 재생하는 HTML5 audio 요소 (화면에 보이지 않음) -->
+                <audio id="audioPlayer"></audio>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript 파일 로드 -->
+    <script src="script.js"></script>
+</body>
+</html>

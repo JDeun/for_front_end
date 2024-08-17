@@ -1,0 +1,108 @@
+/* 기본 스타일 설정 */
+body {
+    margin: 0; /* 기본 여백 제거 */
+    background: rgb(43, 42, 42); /* 배경색 설정 */
+    height: 100vh; /* 전체 화면 높이 */
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향 레이아웃 */
+    justify-content: start; /* 시작 위치에 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    padding: 50px; /* 패딩 추가 */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* 글꼴 설정 */
+  }
+  
+  /* 사이드바 스타일 설정 */
+  aside {
+    background: rgb(252, 230, 165); /* 배경색 설정 */
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향 레이아웃 */
+    align-items: center; /* 아이템 중앙 정렬 */
+    gap: 10px; /* 항목 간 간격 */
+    height: 100vh; /* 전체 화면 높이 */
+    width: 80px; /* 초기 너비 */
+    position: fixed; /* 고정 위치 */
+    left: 0; /* 왼쪽 정렬 */
+    top: 0; /* 상단 정렬 */
+    transition: width 0.2s ease; /* 너비 변경 시 애니메이션 */
+  }
+  
+  /* 사이드바 내 링크 스타일 설정 */
+  aside a {
+    font-size: 1.5rem; /* 글자 크기 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    color: black; /* 글자 색상 설정 */
+    padding: 10px 50px; /* 패딩 추가 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    transition: all 0.2s ease; /* 모든 속성 변경 시 애니메이션 */
+    display: flex; /* Flexbox 사용 */
+    gap: 10px; /* 아이콘과 텍스트 간의 간격 */
+    margin-inline: 20px; /* 좌우 여백 설정 */
+  }
+  
+  /* 사이드바의 ul 요소 스타일 설정 */
+  aside ul {
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+  }
+  
+  /* 사이드바의 li 요소 스타일 설정 */
+  aside li {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    margin-block: 15px; /* 위아래 여백 설정 */
+  }
+  
+  /* 사이드바 링크에 마우스를 올렸을 때 스타일 설정 */
+  aside a:hover {
+    background: black; /* 배경색 변경 */
+    color: white; /* 글자 색상 변경 */
+  }
+  
+  /* 사이드바가 호버되지 않았을 때 링크의 span 요소 숨기기 */
+  aside:not(:hover) a span {
+    display: none; /* 숨기기 */
+  }
+  
+  /* 사이드바에 마우스를 올렸을 때 너비 변경 */
+  aside:hover {
+    width: 240px; /* 너비 변경 */
+  }
+  
+  /* 화면 크기가 768px 이하일 때 스타일 설정 (태블릿 및 모바일) */
+  @media (max-width: 768px) {
+    aside {
+      width: 80px; /* 모바일 화면에서는 사이드바 너비를 줄임 */
+    }
+  
+    aside:hover {
+      width: 200px; /* 모바일 화면에서는 호버 시 너비를 줄임 */
+    }
+  
+    aside a {
+      font-size: 1.2rem; /* 모바일 화면에서는 글자 크기를 줄임 */
+    }
+  
+    aside:not(:hover) a span {
+      display: none; /* 모바일 화면에서는 기본적으로 텍스트 숨김 */
+    }
+  }
+  
+  /* 화면 크기가 480px 이하일 때 스타일 설정 (스마트폰) */
+  @media (max-width: 480px) {
+    aside {
+      width: 60px; /* 아주 작은 화면에서는 사이드바 너비를 더 줄임 */
+    }
+  
+    aside:hover {
+      width: 160px; /* 아주 작은 화면에서는 호버 시 너비를 더 줄임 */
+    }
+  
+    aside a {
+      font-size: 1rem; /* 아주 작은 화면에서는 글자 크기를 더 줄임 */
+    }
+  
+    aside:not(:hover) a span {
+      display: none; /* 아주 작은 화면에서도 기본적으로 텍스트 숨김 */
+    }
+  }
+  

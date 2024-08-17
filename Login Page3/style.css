@@ -1,0 +1,153 @@
+:root {
+    --primary: #03DAC6; /* 주요 색상 */
+    --secondary: white; /* 보조 색상 */
+    --background: #121212; /* 배경 색상 */
+    --box-background: #1E1E1E; /* 박스 배경 색상 */
+    --google: #4285F4; /* 구글 색상 */
+    --kakao: #F7E300; /* 카카오 색상 */
+    --naver: #03C75A; /* 네이버 색상 */
+    --apple: #000000; /* 애플 색상 */
+  }
+  
+  * {
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    box-sizing: border-box; /* 너비와 높이 계산에 패딩과 보더 포함 */
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif; /* 폰트 설정 */
+    height: 100vh; /* 전체 화면 높이 설정 */
+    background: var(--background); /* 배경 색상 설정 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+  }
+  
+  .box {
+    background: var(--box-background); /* 박스 배경 색상 설정 */
+    padding: 1.5rem; /* 내부 여백 설정 */
+    max-width: 400px; /* 최대 너비 설정 */
+    width: 100%; /* 박스 너비 설정 */
+    border-radius: 0.5rem; /* 모서리 둥글게 설정 */
+  }
+  
+  .input_wrapper {
+    position: relative; /* 자식 요소가 절대 위치로 설정될 수 있도록 */
+    margin-bottom: 1rem; /* 입력 필드 간 간격 설정 */
+  }
+  
+  .input_field {
+    width: 100%; /* 입력 필드 너비 설정 */
+    outline: 1.5px solid var(--secondary); /* 입력 필드 외곽선 설정 */
+    font-size: 1rem; /* 폰트 크기 설정 */
+    border-radius: 0.25rem; /* 모서리 둥글게 설정 */
+    color: var(--secondary); /* 텍스트 색상 설정 */
+    padding: 0.75rem; /* 내부 여백 설정 */
+    border: none; /* 기본 테두리 제거 */
+    background: transparent; /* 배경 투명 설정 */
+    transition: all 0.2s; /* 모든 속성에 대해 0.2초 애니메이션 설정 */
+  }
+  
+  .input_field::placeholder {
+    color: transparent; /* 플레이스홀더 텍스트 투명 설정 */
+  }
+  
+  .input_field:focus {
+    outline: 1.5px solid var(--primary); /* 포커스 시 외곽선 색상 설정 */
+  }
+  
+  .input_field:not(:placeholder-shown) ~ .input_label,
+  .input_field:focus ~ .input_label {
+    top: -0.75rem; /* 라벨 상단 위치 설정 */
+    left: 0.5rem; /* 라벨 왼쪽 위치 설정 */
+    font-size: 0.75rem; /* 라벨 폰트 크기 설정 */
+    color: var(--primary); /* 포커스 시 라벨 색상 설정 */
+    background-color: var(--box-background); /* 라벨 배경 색상 설정 */
+    padding: 0 0.25rem; /* 라벨 내부 패딩 설정 */
+  }
+  
+  .input_label {
+    position: absolute; /* 절대 위치 설정 */
+    top: 0.75rem; /* 상단 위치 설정 */
+    left: 0.75rem; /* 왼쪽 위치 설정 */
+    font-size: 1rem; /* 폰트 크기 설정 */
+    color: var(--secondary); /* 텍스트 색상 설정 */
+    transition: 0.3s; /* 색상 변화 애니메이션 설정 */
+  }
+  
+  .input_icon {
+    position: absolute; /* 절대 위치 설정 */
+    right: 0.5rem; /* 오른쪽 위치 설정 */
+    bottom: 0.5rem; /* 하단 위치 설정 */
+    width: 1.75rem; /* 아이콘 너비 설정 */
+    height: 1.75rem; /* 아이콘 높이 설정 */
+    cursor: pointer; /* 클릭 가능한 커서 모양 설정 */
+  }
+  
+  .login_button {
+    width: 100%; /* 버튼 너비 설정 */
+    padding: 0.75rem; /* 버튼 내부 여백 설정 */
+    border: none; /* 기본 테두리 제거 */
+    border-radius: 0.25rem; /* 모서리 둥글게 설정 */
+    color: var(--secondary); /* 텍스트 색상 설정 */
+    background: var(--primary); /* 배경 색상 설정 */
+    font-size: 1rem; /* 폰트 크기 설정 */
+    cursor: pointer; /* 클릭 가능한 커서 모양 설정 */
+    transition: background 0.3s; /* 배경 색상 변화 애니메이션 설정 */
+    margin-bottom: 1rem; /* 버튼과 다른 요소 간의 간격 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+  }
+  
+  .login_button:hover {
+    background: #028489; /* 호버 시 배경 색상 변경 */
+  }
+  
+  .divider {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: var(--secondary); /* 텍스트 색상 설정 */
+    margin: 1rem 0; /* 상하 간격 설정 */
+  }
+  
+  .social_login {
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향 정렬 */
+    gap: 0.75rem; /* 버튼 간 간격 설정 */
+  }
+  
+  .social_button {
+    width: 100%; /* 버튼 너비 설정 */
+    padding: 0.75rem; /* 버튼 내부 여백 설정 */
+    border: none; /* 기본 테두리 제거 */
+    border-radius: 0.25rem; /* 모서리 둥글게 설정 */
+    color: var(--secondary); /* 텍스트 색상 설정 */
+    font-size: 1rem; /* 폰트 크기 설정 */
+    cursor: pointer; /* 클릭 가능한 커서 모양 설정 */
+    transition: background 0.3s; /* 배경 색상 변화 애니메이션 설정 */
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 0.5rem; /* 아이콘과 텍스트 간 간격 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+  }
+  
+  .social_button img {
+    width: 1.5rem; /* 아이콘 너비 설정 */
+    height: 1.5rem; /* 아이콘 높이 설정 */
+  }
+  
+  .google {
+    background: var(--google); /* 구글 색상 설정 */
+  }
+  
+  .kakao {
+    background: var(--kakao); /* 카카오 색상 설정 */
+  }
+  
+  .naver {
+    background: var(--naver); /* 네이버 색상 설정 */
+  }
+  
+  .apple {
+    background: var(--apple); /* 애플 색상 설정 */
+  }
+  
