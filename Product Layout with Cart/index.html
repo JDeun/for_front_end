@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 쇼핑몰</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">여행사 사이트</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="제품 검색...">
+        </div>
+        <div class="cart-icon" id="cart-icon">
+            <span class="material-icons">shopping_cart</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+    </header>
+    <main class="main-content container">
+        <div class="product-grid" id="product-grid">
+            <!-- 제품이 여기에 로드됩니다 -->
+            <div class="product-item">
+                <img src="https://cdn.pixabay.com/photo/2018/11/09/11/04/mars-3804300_640.jpg" alt="여행지 1">
+                <div class="product-info">
+                    <h3>여행지 1</h3>
+                    <span class="price">₩50,000</span>
+                    <button class="add-to-cart" data-product="여행지 1" data-price="50000">장바구니에 추가</button>
+                </div>
+            </div>
+            <!-- 나머지 제품들... -->
+        </div>
+    </main>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <h2>장바구니</h2>
+        <button class="close-btn" id="close-cart">
+            <span class="material-icons">close</span>
+        </button>
+        <div id="cart-items-container">
+            <!-- 장바구니 항목이 여기에 로드됩니다 -->
+        </div>
+        <div class="cart-summary">
+            <h3>합계</h3>
+            <span id="cart-total">₩0</span>
+        </div>
+        <button class="checkout-btn" id="checkout-btn">결제하기</button>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>

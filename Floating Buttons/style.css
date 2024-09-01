@@ -1,0 +1,82 @@
+/* 전체 배경 색상 설정 */
+body {
+    background-color: #11131e;
+}
+
+/* 플로팅 버튼 컨테이너 설정 */
+.fab-container {
+    display: flex;
+    flex-direction: column; /* 버튼들을 세로로 정렬 */
+    justify-content: flex-end; /* 컨테이너의 아래쪽에 정렬 */
+    align-items: center;
+    user-select: none; /* 사용자가 요소를 선택할 수 없도록 설정 */
+    position: absolute; /* 위치를 절대값으로 설정 */
+    bottom: 30px; /* 화면의 아래에서 30px 떨어진 위치 */
+    right: 30px; /* 화면의 오른쪽에서 30px 떨어진 위치 */
+}
+
+/* 마우스를 올렸을 때 서브 버튼들을 보여주는 효과 */
+.fab-container:hover {
+    height: 100%;
+}
+
+/* 서브 버튼들에 대한 애니메이션 설정 */
+.fab-container:hover .sub-button:nth-child(2) {
+    transform: translateY(-80px);
+}
+
+/* 메인 플로팅 버튼 아이콘 스타일 */
+.fab-container .fab .fab-content .material-icons {
+    color: white;
+    font-size: 48px;
+}
+
+/* 서브 버튼 스타일 */
+.fab-container .sub-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10px;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: #4ba2ff; /* 버튼 배경 색상 */
+    border-radius: 50%; /* 버튼을 원형으로 만들기 */
+    transition: all 0.3s ease; /* 버튼의 애니메이션 효과 */
+}
+
+/* 서브 버튼에 마우스를 올렸을 때 커서 모양 변경 */
+.fab-container .sub-button:hover {
+    cursor: pointer;
+}
+
+/* 서브 버튼 아이콘 스타일 */
+.fab-container .sub-button .material-icons {
+    color: white;
+    padding-top: 6px;
+}
+
+/* 각 서브 버튼의 애니메이션 설정 */
+.fab-container:hover .sub-button:nth-child(3) {
+    transform: translateY(-140px);
+}
+.fab-container:hover .sub-button:nth-child(4) {
+    transform: translateY(-200px);
+}
+.fab-container:hover .sub-button:nth-child(5) {
+    transform: translateY(-260px);
+}
+.fab-container:hover .sub-button:nth-child(6) {
+    transform: translateY(-320px);
+}
+
+/* 메인 플로팅 버튼 스타일 */
+.fab-container .fab {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    background-color: #4ba2ff; /* 메인 버튼 배경 색상 */
+    border-radius: 50%; /* 메인 버튼을 원형으로 만들기 */
+    z-index: 2; /* 다른 요소보다 위에 표시되도록 설정 */
+}

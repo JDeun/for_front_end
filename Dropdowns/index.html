@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운 메뉴</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 라이브러리 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="dropdown">
+        <button class="dropdown-toggle">
+            <span>Menu </span>
+            <i class="fa-solid fa-caret-down"></i>
+        </button>
+        <ul class="menu">
+            <li class="menu-item dropdown">
+                <a href="#" class="submenu-toggle">
+                    <span>아우터</span>
+                    <i class="fa-solid fa-caret-right"></i>
+                </a>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#">블레이저</a></li>
+                    <li class="submenu-item"><a href="#">집업</a></li>
+                    <li class="submenu-item"><a href="#">코트</a></li>
+                    <li class="submenu-item"><a href="#">카디건</a></li>
+                </ul>
+            </li>
+            <li class="menu-item dropdown">
+                <a href="#" class="submenu-toggle">
+                    <span>상의</span>
+                    <i class="fa-solid fa-caret-right"></i>
+                </a>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#">티셔츠</a></li>
+                    <li class="submenu-item"><a href="#">셔츠</a></li>
+                    <li class="submenu-item"><a href="#">니트</a></li>
+                </ul>
+            </li>
+            <li class="menu-item dropdown">
+                <a href="#" class="submenu-toggle">
+                    <span>하의</span>
+                    <i class="fa-solid fa-caret-right"></i>
+                </a>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#">슬렉스</a></li>
+                    <li class="submenu-item"><a href="#">치노팬츠</a></li>
+                    <li class="submenu-item"><a href="#">진</a></li>
+                    <li class="submenu-item"><a href="#">트랙팬츠</a></li>
+                </ul>
+            </li>
+            <li class="menu-item dropdown">
+                <a href="#" class="submenu-toggle">
+                    <span>악세서리</span>
+                    <i class="fa-solid fa-caret-right"></i>
+                </a>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#">양말</a></li>
+                    <li class="submenu-item"><a href="#">머플러</a></li>
+                    <li class="submenu-item"><a href="#">가방</a></li>
+                    <li class="submenu-item"><a href="#">기타</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

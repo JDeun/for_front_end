@@ -1,0 +1,191 @@
+/* 기본 스타일링 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* 헤더 스타일 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .search-bar input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+.header .cart-icon {
+    padding-right: 50px;
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.header .cart-icon .material-icons {
+    font-size: 24px;
+}
+
+.header .cart-icon:hover {
+    color: #ff6f61;
+}
+
+.header .cart-icon .cart-count {
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* 메인 콘텐츠 스타일 */
+.main-content {
+    padding: 1rem;
+    margin-top: 5rem; /* 헤더 높이만큼 여백 추가 */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* 제품 항목 스타일 */
+.product-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 0.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 버튼을 하단에 고정 */
+}
+
+.product-info h3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.product-info .price {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.product-info .add-to-cart {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: auto; /* 버튼을 하단에 고정 */
+}
+
+.product-info .add-to-cart:hover {
+    background: #e64a45;
+}
+
+/* 사이드바 스타일 */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000; /* 사이드바가 헤더보다 위에 오도록 설정 */
+}
+
+.cart-sidebar.open {
+    transform: translateX(0);
+}
+
+.cart-sidebar h2 {
+    margin-top: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #ff6f61;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.close-btn:hover {
+    color: #e64a45;
+}
+
+.cart-summary {
+    margin-top: 1rem;
+}
+
+.cart-summary h3 {
+    margin: 0;
+}
+
+.cart-summary #cart-total {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.checkout-btn:hover {
+    background: #e64a45;
+}

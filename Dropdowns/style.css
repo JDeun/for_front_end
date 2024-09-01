@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    height: 100vh;
+    background-color: #fcfcf7;
+    color: #1f1f09;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button,
+li,
+a {
+    all: unset;
+    box-sizing: border-box;
+}
+
+#dropdown {
+    --border-radius: 6px;
+    --shadow-color: 60deg 13% 61%;
+    max-width: 220px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+/* 드롭다운 메뉴와 서브메뉴 아이템 스타일 */
+.dropdown-toggle,
+.menu-item,
+.submenu-item {
+    width: 100%;
+    padding: 12px 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.menu-item:first-child {
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+
+.menu-item:last-child {
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.menu-item:hover,
+.submenu-item:hover {
+    background-color: #faf6ea;
+}
+
+/* 드롭다운과 서브메뉴 스타일 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle,
+.submenu-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-toggle > span {
+    color: #7b7b6e;
+}
+
+i {
+    color: #db8400;
+    transition: 0.25s ease;
+}
+
+.dropdown-toggle.open > i {
+    transform: rotate(180deg);
+}
+
+/* 드롭다운 메뉴 스타일 */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    position: absolute;
+    top: 100%; /* 버튼 바로 아래에 위치 */
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu.open {
+    display: flex; /* 열릴 때 flex로 표시 */
+}
+
+/* 서브메뉴 스타일 */
+.submenu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    position: absolute;
+    left: 100%; /* 부모 항목의 오른쪽에 위치 */
+    top: 0; /* 부모 항목과 동일한 높이에서 시작 */
+    margin-left: 10px; /* 서브메뉴와 부모 항목 사이의 간격 */
+    width: max-content; /* 내용에 맞게 너비 설정 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item:hover > .submenu {
+    display: flex; /* 서브메뉴는 부모 항목을 호버할 때 표시 */
+}

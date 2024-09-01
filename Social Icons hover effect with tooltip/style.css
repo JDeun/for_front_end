@@ -1,0 +1,91 @@
+/* 아이콘 리스트의 기본 스타일 */
+.wrapper {
+    display: inline-flex; /* 아이템을 가로로 나열 */
+    list-style: none; /* 기본 리스트 스타일 제거 */
+}
+
+/* 각 아이콘의 기본 스타일 */
+.wrapper .icon {
+    position: relative; /* 툴팁의 절대 위치 설정을 위한 기준 */
+    background: #ffffff; /* 아이콘 배경 색상 */
+    border-radius: 50%; /* 아이콘을 원형으로 만들기 */
+    padding: 15px; /* 내부 여백 설정 */
+    margin: 10px; /* 아이콘 간의 간격 */
+    width: 50px;
+    height: 50px;
+    font-size: 18px; /* 아이콘 크기 */
+    display: flex;
+    justify-content: center; /* 아이콘을 수평으로 가운데 정렬 */
+    align-items: center; /* 아이콘을 수직으로 가운데 정렬 */
+    flex-direction: column; /* 아이콘 내의 요소들을 세로로 정렬 */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    cursor: pointer; /* 마우스를 올렸을 때 포인터 커서 표시 */
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* 애니메이션 효과 */
+}
+
+/* 툴팁 스타일 */
+.wrapper .tooltip {
+    position: absolute; /* 부모 요소 기준 위치 설정 */
+    top: 0; /* 기본 위치 설정 */
+    font-size: 14px; /* 툴팁 글자 크기 */
+    background: #ffffff; /* 툴팁 배경 색상 */
+    color: #ffffff; /* 툴팁 글자 색상 */
+    padding: 5px 8px; /* 툴팁의 내부 여백 */
+    border-radius: 5px; /* 툴팁 모서리 둥글게 */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* 툴팁 그림자 효과 */
+    opacity: 0; /* 툴팁 초기 불투명도 (보이지 않음) */
+    pointer-events: none; /* 마우스 이벤트를 받지 않음 */
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* 툴팁 애니메이션 효과 */
+}
+
+/* 툴팁의 삼각형 부분 스타일 */
+.wrapper .tooltip::before {
+    position: absolute;
+    content: ""; /* 비어있는 내용 */
+    height: 8px;
+    width: 8px;
+    background: #ffffff; /* 삼각형 배경 색상 */
+    bottom: -3px; /* 부모 요소 기준 아래쪽 위치 */
+    left: 50%; /* 부모 요소 기준 왼쪽에서의 위치 */
+    transform: translate(-50%) rotate(45deg); /* 삼각형 모양을 만들기 위한 변환 */
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* 애니메이션 효과 */
+}
+
+/* 아이콘을 호버할 때 툴팁 표시 */
+.wrapper .icon:hover .tooltip {
+    top: -45px; /* 툴팁이 위로 이동 */
+    opacity: 1; /* 툴팁이 보이도록 설정 */
+    visibility: visible; /* 툴팁 가시화 */
+    pointer-events: auto; /* 마우스 이벤트 활성화 */
+}
+
+/* 아이콘을 호버할 때 텍스트 그림자 효과 */
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1); /* 텍스트에 그림자 추가 */
+}
+
+/* 각 소셜 미디어 별 색상 설정 */
+.facebook {
+    --color: #1877f2; /* 페이스북 색상 */
+}
+.twitter {
+    --color: #1da1f2; /* 트위터 색상 */
+}
+.instagram {
+    --color: #e4405f; /* 인스타그램 색상 */
+}
+.github {
+    --color: #333333; /* 깃허브 색상 */
+}
+.youtube {
+    --color: #cd201f; /* 유튜브 색상 */
+}
+
+/* 호버 시 아이콘 및 툴팁 색상 변경 */
+.icon:hover,
+.icon:hover .tooltip,
+.icon:hover .tooltip::before {
+    background: var(--color); /* 설정된 색상으로 변경 */
+    color: white; /* 아이콘 및 툴팁 텍스트 색상 변경 */
+}

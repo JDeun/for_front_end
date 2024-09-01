@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로필 드롭다운</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Font Awesome CDN 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navigation group">
+            <!-- 웹 아이콘들 -->
+            <i class="fas fa-envelope icon" aria-label="메시지"></i>
+            <i class="fas fa-bell icon" aria-label="알림"></i>
+            <!-- 프로필 이미지 -->
+            <img class="profile" src="https://cdn.pixabay.com/photo/2023/06/29/12/28/cats-8096304_640.jpg" alt="프로필">
+        </div>
+        <!-- 드롭다운 메뉴 -->
+        <div class="dropdown_wrapper hide">
+            <nav>
+                <ul>
+                    <!-- 드롭다운 항목들 -->
+                    <li>내 프로필</li>
+                    <li>설정</li>
+                    <li>도움말</li>
+                    <li>개인정보</li>
+                    <hr class="divider">
+                    <li>피드백</li>
+                    <li>문제 보고</li>
+                    <hr class="divider">
+                    <div class="switch account">
+                        <span>계정 전환</span>
+                        <ul id="account-list">
+                            <!-- 계정 목록 -->
+                            <li class="active" data-user="natalia">
+                                <img src="https://cdn.pixabay.com/photo/2023/06/29/12/28/cats-8096304_640.jpg" alt="Natalia">
+                                <div class="user">
+                                    <div class="name">Hong kill-dong</div>
+                                    <div class="email">kill-dong@example.com</div>
+                                </div>
+                                <div class="marker"></div>
+                            </li>
+                            <li data-user="john">
+                                <img src="https://cdn.pixabay.com/photo/2021/02/23/09/26/cat-6042858_640.jpg" alt="John">
+                                <div class="user">
+                                    <div class="name">John Doe</div>
+                                    <div class="email">john.doe@example.com</div>
+                                </div>
+                                <div class="marker"></div>
+                            </li>
+                            <!-- 추가 계정들 -->
+                        </ul>
+                        <button class="sign-out-all">모든 계정 로그아웃</button>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script src="script.js"></script>
+</body>
+</html>
