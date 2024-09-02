@@ -1,0 +1,105 @@
+/* 기본적인 스타일 설정 */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif; /* 글꼴 설정 */
+    background: #0c0b0f; /* 배경 색상 설정 */
+}
+
+/* 모든 요소의 box-sizing을 border-box로 설정 */
+* {
+    box-sizing: border-box;
+}
+
+/* 로딩 바 스타일 설정 */
+progress {
+    position: fixed; /* 화면 상단에 고정 */
+    z-index: 2; /* 다른 요소보다 위에 위치 */
+    top: 0;
+    left: 0;
+    -webkit-appearance: none; /* 브라우저 기본 스타일 제거 */
+    appearance: none;
+    width: 100%; /* 화면 전체 너비 */
+    height: 8px; /* 높이 설정 */
+    border: none;
+    background: transparent; /* 배경 투명 설정 */
+}
+
+/* Webkit 기반 브라우저용 로딩 바 스타일 설정 */
+progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.16); /* 배경 색상 */
+}
+
+progress::-webkit-progress-value {
+    background-color: #8f44fd; /* 진행 색상 */
+}
+
+/* 내비게이션 바 스타일 설정 */
+nav {
+    position: fixed; /* 화면 상단에 고정 */
+    top: 0;
+    left: 0;
+    z-index: 1; /* 로딩 바보다 아래에 위치 */
+    width: 100%; /* 화면 전체 너비 */
+    height: 92px; /* 높이 설정 */
+    background: rgba(12, 11, 15, 0.8); /* 배경 색상 */
+    backdrop-filter: blur(10px); /* 배경 흐림 효과 */
+    color: rgba(255, 255, 255, 0.96); /* 글자 색상 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    padding: 0 20px; /* 좌우 패딩 */
+    display: flex;
+    gap: 10px; /* 아이콘과 텍스트 사이의 간격 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: space-between; /* 좌우 정렬 */
+    z-index: 1;
+}
+
+/* 링크 컨테이너 스타일 설정 */
+nav .links {
+    margin-left: auto; /* 자동 좌측 여백으로 오른쪽 정렬 */
+    display: flex;
+    gap: 16px; /* 아이콘 사이 간격 */
+}
+
+/* 내비게이션 링크 아이콘 스타일 설정 */
+nav .links a {
+    color: #ffffff; /* 아이콘 색상을 흰색으로 설정 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+nav i {
+    font-size: 24px; /* 아이콘 크기 설정 */
+}
+
+/* 내비게이션 제목 스타일 설정 */
+nav h1 {
+    font-size: 18px; /* 제목 크기 설정 */
+}
+
+/* 메인 콘텐츠 스타일 설정 */
+main {
+    padding: 120px 20px 20px; /* 상단 패딩을 넉넉하게 설정하여 내비게이션 바와 콘텐츠 간격 확보 */
+    display: flex;
+    flex-wrap: wrap; /* 카드가 여러 줄로 배치되도록 설정 */
+    gap: 20px; /* 카드 간 간격 설정 */
+    justify-content: center; /* 카드 중앙 정렬 */
+}
+
+/* 카드 스타일 설정 */
+.card {
+    background: #1e1e1e; /* 카드 배경 색상 */
+    color: #ffffff; /* 카드 글자 색상 */
+    border-radius: 8px; /* 카드 모서리 둥글게 */
+    padding: 20px; /* 카드 내부 패딩 */
+    width: 300px; /* 카드 너비 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 카드 그림자 효과 */
+}
+
+.card h2 {
+    margin-top: 0; /* 제목 상단 여백 제거 */
+    font-size: 20px; /* 제목 크기 설정 */
+}
+
+.card p {
+    margin: 0; /* 내용 여백 제거 */
+    font-size: 16px; /* 내용 크기 설정 */
+}

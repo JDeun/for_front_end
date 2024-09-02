@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 소셜 로그인 </title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Material Icons -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="close-button">
+                <span class="material-icons">close</span>
+            </button>
+            <a class="logo" href="#">
+                <span class="material-icons">twitter</span>
+            </a>
+        </div>
+        <div class="content">
+            <h1>트위터에 로그인</h1>
+            <div class="action-buttons">
+                <button class="primary-button sign-in-button google-button">
+                    <i class="fab fa-google"></i>
+                    <span>Google로 로그인</span>
+                </button>
+                <button class="primary-button sign-in-button apple-button">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple로 로그인</span>
+                </button>
+                <button class="primary-button sign-in-button twitter-button">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter로 로그인</span>
+                </button>
+            </div>
+            <div class="divider">
+                <p>또는</p>
+            </div>
+            <div class="email-log-in">
+                <input type="text" id="log-in" placeholder="Email">
+                <label for="log-in">전화번호, 이메일 또는 사용자 이름</label>
+            </div>
+            <div class="password-log-in">
+                <input type="password" id="password" placeholder="Password">
+                <label for="password">비밀번호</label>
+            </div>
+            <div class="action-buttons">
+                <button class="primary-button">다음</button>
+                <button class="secondary-button">비밀번호를 잊으셨나요?</button>
+            </div>
+        </div>
+        <div class="sign-up">
+            <p>계정이 없으신가요? <a href="#">가입하기</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

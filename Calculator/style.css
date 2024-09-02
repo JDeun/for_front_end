@@ -1,0 +1,67 @@
+/* 계산기 전체 스타일 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* 계산기 컨테이너 스타일 */
+.calculator {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 디스플레이 스타일 */
+.display {
+    background-color: #222;
+    color: #fff;
+    font-size: 2em;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+/* 버튼 컨테이너 스타일 */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* 버튼 스타일 */
+.btn {
+    padding: 20px;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.operator {
+    background-color: #f0ad4e;
+}
+
+.operator:hover {
+    background-color: #ec971f;
+}
+
+.equal {
+    background-color: #f0ad4e;
+    grid-column: span 4; /* = 버튼을 전체 열에 걸쳐서 */
+}
+
+.equal:hover {
+    background-color: #ec971f;
+}
