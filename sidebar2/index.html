@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사이드바</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <nav class="sidebar">
+    <div class="sidebar-top-wrapper">
+      <div class="sidebar-top">
+        <a href="#" class="logo__wrapper">
+          <img src="https://cdn.pixabay.com/photo/2017/06/16/17/37/cat-2409742_640.jpg" alt="로고" class="logo-small">
+          <span class="hide">고양이가 로고다</span>
+        </a>
+      </div>
+      <div class="expand-btn">
+        <span class="material-icons">menu</span>
+      </div>
+    </div>
+    <div class="search__wrapper">
+      <span class="material-icons">search</span>
+      <input type="search" placeholder="  검색">
+    </div>
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="#dashboard" title="대시보드">
+            <span class="material-icons">dashboard</span>
+            <span class="link hide">대시보드</span>
+          </a>
+        </li>
+        <!-- 다른 메인 링크들 -->
+      </ul>
+    </div>
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="#settings" title="설정">
+            <span class="material-icons">settings</span>
+            <span class="link hide">설정</span>
+          </a>
+        </li>
+        <!-- 다른 설정 링크들 -->
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="sidebar_profile">
+      <div class="avatar_wrapper">
+        <img class="avatar" src="https://cdn.pixabay.com/photo/2020/07/03/13/48/cat-5366394_640.jpg" alt="Joe Doe 사진">
+        <div class="online status"></div>
+      </div>
+      <section class="avatar_name hide">
+        <div class="user-name">Joe Doe</div>
+        <div class="email">joe.doe@atheros.ai</div>
+      </section>
+      <a href="#logout" class="logout">
+        <span class="material-icons">logout</span>
+      </a>
+    </div>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>

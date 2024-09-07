@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>링크 공유</title>
+    <!-- Google Material Icons 불러오기 -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 공유 버튼 -->
+    <button type="button" class="share-btn">
+      <i class="material-icons">share</i> <!-- 아이콘 추가 -->
+    </button>
+
+    <!-- 링크 복사 모달 창 -->
+    <dialog class="copy-link-dialog">
+      <form>
+        <header>
+          <h2>공유하기</h2>
+          <!-- 닫기 버튼 -->
+          <button class="close-btn secondary" type="button">
+            <i class="material-icons">close</i> <!-- 닫기 아이콘 추가 -->
+          </button>
+        </header>
+        <div class="copy-link-dialog_content">
+          <p>아래 링크를 복사하여 사람들과 공유하세요.</p>
+          <div class="copy-link-wrapper">
+            <!-- 복사할 링크 -->
+            <input
+              id="copy-link-input"
+              type="text"
+              required
+              readonly
+            />
+            <!-- 복사 버튼 -->
+            <button class="copy-btn" type="button">
+              <span id="copy-text">링크 복사</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+  </body>
+  <script src="script.js" defer></script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>My Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <span class="title">안녕하세요, Hong Kill-dong</span>
+        <img src="https://cdn.pixabay.com/photo/2019/09/21/14/11/cat-4494003_640.jpg" alt="프로필 사진" class="profile-pic">
+    </nav>
+
+    <div class="filter-section">
+        <span class="info-text">어디로 가고 싶으신가요?</span>
+        <div class="search-group">
+            <input type="text" class="search" placeholder="장소, 위치 검색">
+            <button class="btn-filter"><i class="bi bi-funnel"></i></button>
+        </div>
+        <ul class="categories">
+            <li><a class="active" href="#" data-filter="all">전체</a></li>
+            <li><a href="#" data-filter="popular">인기</a></li>
+            <li><a href="#" data-filter="most visited">가장 방문된</a></li>
+            <li><a href="#" data-filter="new">새로운</a></li>
+        </ul>
+    </div>
+
+    <div class="blurer"></div>
+
+    <section class="cards">
+        <div class="card" data-category="popular">
+            <span class="card-title">여행 1</span>
+            <img src="https://cdn.pixabay.com/photo/2018/03/19/20/47/wood-3241181_640.jpg" class="card-img" alt="여행 1 이미지">
+            <button class="card-btn">자세히 보기</button>
+        </div>
+        <div class="card" data-category="most visited">
+            <span class="card-title">여행 2</span>
+            <img src="https://cdn.pixabay.com/photo/2018/11/09/11/04/mars-3804300_640.jpg" class="card-img" alt="여행 2 이미지">
+            <button class="card-btn">자세히 보기</button>
+        </div>
+        <div class="card" data-category="new">
+            <span class="card-title">여행 3</span>
+            <img src="https://cdn.pixabay.com/photo/2016/11/30/15/00/apples-1872997_640.jpg" class="card-img" alt="여행 3 이미지">
+            <button class="card-btn">자세히 보기</button>
+        </div>
+    </section>
+
+    <!-- 모달 창 -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="carousel">
+        <img src="https://cdn.pixabay.com/photo/2018/03/19/20/47/wood-3241181_640.jpg" class="card-img" alt="여행 1 이미지">
+      </div>
+      <div class="modal-body">
+        <h2>상세 내용</h2>
+        <p>여기에 상세 내용을 입력하세요.</p>
+        <button class="btn-pay">결제하기</button>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

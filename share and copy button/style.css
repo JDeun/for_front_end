@@ -1,0 +1,126 @@
+/* 기본 색상 정의 */
+:root {
+  --primary: #6e45fe;
+  --primary-hover: #5222ff;
+  --btn-border: #7f57ff;
+  --white: white;
+  --text: #252728;
+  --modal-bg: #070707;
+  --headline: #1a1e1f;
+  --gray-text: #1e2026;
+  --bg: #363636;
+  --gray-light: #f3f3f4;
+}
+
+/* 페이지 레이아웃 */
+body {
+  font-family: 'Mulish', sans-serif;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+/* 공유 버튼 스타일 */
+.share-btn {
+  position: absolute; /* 버튼을 절대 위치로 설정 */
+  top: 830px;          /* 페이지 상단에서 20px 아래로 */
+  left: 1150px;         /* 페이지 왼쪽에서 20px 오른쪽으로 */
+  border-radius: 50%; /* 둥근 모서리 유지 */
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.share-btn .material-icons {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.share-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* 닫기 버튼 스타일 */
+.close-btn {
+  border-radius:50%;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+.close-btn .material-icons {
+  color: var(--white);
+  font-size: 1.75rem;
+}
+
+/* 모달 창 스타일 */
+.copy-link-dialog {
+  border-radius: 0.75rem;
+  max-width: 36rem;
+  width: 100%;
+  background: var(--modal-bg);
+  border: none;
+  margin-top: 4rem;
+  padding: 1rem;
+}
+
+/* 모달 내부 레이아웃 */
+.copy-link-dialog header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--bg);
+}
+
+.copy-link-dialog header h2 {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.copy-link-dialog_content {
+  padding: 2rem;
+  color: var(--white);
+}
+
+.copy-link-dialog_content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 링크 복사 영역 */
+.copy-link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background: var(--gray-light);
+  padding: 0.2rem;
+  padding-left: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.copy-link-wrapper input {
+  background: inherit;
+  border: none;
+  width: 100%;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--gray-text);
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  width: 20%;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+}
