@@ -1,0 +1,80 @@
+/* 기본 레이아웃 설정 */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(248, 227, 230);
+}
+
+/* 버튼 컨테이너 스타일 */
+.btn-container {
+  position: relative;
+}
+
+/* 플레이 버튼 스타일 */
+.btn-play {
+  z-index: 3;
+  padding-left: 10px;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 버튼 박스 공통 스타일 */
+.btn-box {
+  position: absolute;
+  background: rgb(58, 58, 250);
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  transform-origin: top left;
+}
+
+/* 작은 박스 스타일 */
+.btn-small-box {
+  z-index: 2;
+}
+
+/* 큰 박스 스타일 */
+.btn-big-box {
+  z-index: 1;
+}
+
+/* 호버 시 애니메이션 효과 */
+.btn-container:hover .btn-small-box {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.btn-container:hover .btn-big-box {
+  animation: pulse 1.55s infinite ease-in-out;
+}
+
+/* 중앙 정렬 */
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 펄스 애니메이션 */
+@keyframes pulse {
+  0% {
+      transform: scale(1) translate(-50%, -50%);
+      opacity: 0.7;
+  }
+  50% {
+      transform: scale(1.5) translate(-50%, -50%);
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(1.8) translate(-50%, -50%);
+      opacity: 0;
+  }
+}

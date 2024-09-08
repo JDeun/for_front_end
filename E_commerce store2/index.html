@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고양이 이커머스 스토어</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="https://cdn.pixabay.com/photo/2017/07/01/02/17/cat-2460394_640.jpg" alt="고양이 스토어 로고" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="product.html">상품</a></li>
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">연락처</a></li>
+                        <li><a href="account.html">계정</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="https://i.ibb.co/PNjjx3y/cart.png" alt="장바구니" width="30px" height="30px"></a>
+                <img src="https://i.ibb.co/6XbqwjD/menu.png" alt="메뉴" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>귀여운 고양이와 함께<br>쇼핑하세요!</h1>
+                    <p>우리는 귀여운 고양이와 함께하는 쇼핑의 즐거움을 제공합니다.<br>일상에서 작은 행복을 찾으세요.</p>
+                    <a href="#" class="btn">지금 탐색하기 &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="https://cdn.pixabay.com/photo/2016/12/14/21/40/cat-1909527_640.jpg" alt="고양이 상품">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 카테고리 -->
+    <section class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="https://cdn.pixabay.com/photo/2017/07/01/02/17/cat-2460394_640.jpg" alt="고양이 장난감">
+                    <h3>고양이 장난감</h3>
+                </div>
+                <div class="col-3">
+                    <img src="https://cdn.pixabay.com/photo/2016/03/27/20/04/cat-1284022_640.jpg" alt="고양이 장난감">
+                    <h3>고양이 식기</h3>
+                </div>
+                <div class="col-3">
+                    <img src="https://cdn.pixabay.com/photo/2016/05/20/11/45/cat-1405857_640.jpg" alt="고양이 침대">
+                    <h3>고양이 침대</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 추천 상품 -->
+    <section class="small-container">
+        <h2 class="title">추천 상품</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="product_details.html"><img src="https://cdn.pixabay.com/photo/2015/11/16/12/23/cat-1048288_640.jpg" alt="고양이 장난감"></a>
+                <a href="product_details.html">
+                    <h4>고양이 장난감</h4>
+                </a>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>₩20,000</p>
+            </div>
+            <div class="col-4">
+                <a href="product_details.html"><img src="https://cdn.pixabay.com/photo/2017/07/01/02/17/cat-2460394_640.jpg" alt="고양이 식기"></a>
+                <a href="product_details.html">
+                    <h4>고양이 식기</h4>
+                </a>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>₩30,000</p>
+            </div>
+            <div class="col-4">
+                <a href="product_details.html"><img src="https://cdn.pixabay.com/photo/2016/11/29/05/37/cat-1869230_640.jpg" alt="고양이 침대"></a>
+                <a href="product_details.html">
+                    <h4>고양이 침대</h4>
+                </a>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>₩50,000</p>
+            </div>
+            <div class="col-4">
+                <a href="product_details.html"><img src="https://cdn.pixabay.com/photo/2016/09/03/12/34/cat-1647905_640.jpg" alt="고양이 장난감"></a>
+                <a href="product_details.html">
+                    <h4>고양이 장난감</h4>
+                </a>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>₩25,000</p>
+            </div>
+        </div>
+
+        <h2 class="title">최신 상품</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="product_details.html"><img src="https://cdn.pixabay.com/photo/2016/11/21/17/17/cat-1839327_640.jpg" alt="고양이 장난감"></a>
+                <a href="product_details.html">
+                    <h4>고양이 장난감</h4>
+                </a>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>₩22,000</p>
+            </div>
+            <div class="col-4">
+                <a href="product_details.html"><img src="https://cdn.pixabay.com/photo/2016/06/01/21/17/cat-1427498_640.jpg" alt="고양이 식기"></a>
+                <a href="product_details.html">
+                    <h4>고양이 식기</h4>
+                </a>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>₩33,000</p>
+            </div>
+            <div class="col-4">
+                <a href="product_details.html"><img src="https://cdn.pixabay.com/photo/2016/10/12/19/00/cat-1731557_640.jpg" alt="고양이 침대"></a>
+                <a href="product_details.html">
+                    <h4>고양이 침대</h4>
+                </a>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>₩55,000</p>
+            </div>
+           
+            <div class="col-4">
+                <a href="product_details.html"><img src="https://cdn.pixabay.com/photo/2016/11/21/17/17/cat-1839327_640.jpg" alt="고양이 장난감"></a>
+                <a href="product_details.html">
+                    <h4>고양이 장난감</h4>
+                </a>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>₩22,000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h3>고양이 스토어</h3>
+                    <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">상품</a></li>
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">연락처</a></li>
+                        <li><a href="#">계정</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h3>연락처</h3>
+                    <p>서울특별시 강남구 역삼동</p>
+                    <p>전화: 1234-5678</p>
+                    <p>이메일: info@catstore.com</p>
+                </div>
+                <div class="col-4">
+                    <h3>뉴스레터</h3>
+                    <p>최신 소식과 프로모션을 이메일로 받아보세요.</p>
+                    <form action="#">
+                        <input type="email" placeholder="이메일 입력" required>
+                        <input type="submit" value="구독">
+                    </form>
+                </div>
+            </div>
+            <p>&copy; 2024 고양이 스토어. 모든 권리 보유.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

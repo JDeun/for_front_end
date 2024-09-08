@@ -1,0 +1,243 @@
+/* 기본 스타일 설정 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 헤더 스타일 */
+.header {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+/* 카테고리 스타일 */
+.categories {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.categories .small-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.categories .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories .col-3 {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.categories img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.categories img:hover {
+    transform: scale(1.05);
+}
+
+.categories h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* 추천 상품 스타일 */
+.small-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-4 {
+    flex: 1;
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+.col-4 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.col-4 img:hover {
+    transform: scale(1.05);
+}
+
+.rating {
+    margin: 10px 0;
+}
+
+.rating i {
+    color: #f5c518;
+}
+
+/* 푸터 스타일 */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .col-4 {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 5px 0;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer input[type="submit"] {
+    background-color: #f5c518;
+    color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer input[type="submit"]:hover {
+    background-color: #f4b328;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        background-color: #f8f8f8;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        display: block;
+    }
+
+    #MenuItems.active {
+        display: flex;
+    }
+}

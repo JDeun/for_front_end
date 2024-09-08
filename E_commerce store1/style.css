@@ -1,0 +1,239 @@
+/* 전체 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* 헤더 */
+.header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header .logo {
+    width: 120px;
+}
+.header ul {
+    display: flex;
+    list-style: none;
+}
+.header ul li {
+    margin: 0 15px;
+}
+.header ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.header ul li a:hover {
+    color: #ff4321;
+}
+
+/* 소개 섹션 */
+.intro {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    background-image: url('https://cdn.pixabay.com/photo/2016/06/25/12/48/go-pro-1478810_1280.jpg');
+    background-size: cover;
+}
+.intro h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+.intro h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.intro .dis {
+    color: #ff4321;
+}
+.intro h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.btn {
+    display: inline-block;
+    background-color: #ff4321;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #e63e1f;
+}
+
+/* 섹션 */
+.section {
+    padding: 60px 20px;
+}
+.h h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.h span {
+    color: #ff4321;
+}
+
+/* 혜택 섹션 */
+.benefit-center {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.benefit {
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+}
+.benefit .icon {
+    font-size: 3rem;
+    color: #ff4321;
+    margin-bottom: 15px;
+}
+.benefit h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.benefit .text {
+    color: #606163;
+}
+
+/* 신상품 섹션 */
+.ac-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ac {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+}
+.ac .img-cover img {
+    width: 100%;
+}
+.ac p {
+    padding: 10px;
+    font-size: 1.8rem;
+}
+.rating i {
+    color: #ff4321;
+}
+.price {
+    font-weight: 600;
+    color: #ff4321;
+    padding: 10px;
+}
+
+/* 카테고리별 쇼핑 섹션 */
+.ab.box {
+    display: flex;
+    flex-wrap: wrap; /* 아이템들이 여러 줄로 나누어질 수 있도록 함 */
+    justify-content: center; /* 아이템을 중앙 정렬 */
+    gap: 10px; /* 아이템 간의 간격을 조정 */
+}
+
+.item {
+    position: relative;
+    width: 200px; /* 카테고리 아이템의 너비 설정 */
+    height: 200px; /* 카테고리 아이템의 높이 설정 */
+    overflow: hidden;
+    border-radius: 8px; /* 모서리 둥글게 처리 */
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 아이템의 크기에 맞게 조정 */
+    transition: filter 0.3s ease, transform 0.3s ease; /* 호버 효과에 대한 트랜지션 설정 */
+}
+
+.item:hover img {
+    filter: grayscale(100%) blur(5px); /* 이미지 흑백 및 블러 효과 */
+    transform: scale(1.05); /* 호버 시 이미지 확대 효과 */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* 호버 시 오버레이의 트랜지션 효과 */
+}
+
+.item:hover .overlay {
+    opacity: 1; /* 호버 시 오버레이 보이게 하기 */
+}
+
+.overlay h2 {
+    margin: 0;
+    font-size: 24px; /* 타이틀의 폰트 크기 설정 */
+}
+
+
+/* 푸터 */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+footer ul li a:hover {
+    text-decoration: underline;
+}
+.social-links {
+    margin-top: 20px;
+}
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+}
