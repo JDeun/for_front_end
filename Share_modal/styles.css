@@ -1,0 +1,108 @@
+/* 루트 컬러 변수 설정 */
+:root {
+    --primary: #6E45FE;
+    --primary-hover: #6034ff;
+    --btn-border: #7f57ff;
+    --white: #ffffff;
+    --text: #252728;
+    --bg: #f8f8f8;
+    --bg-modal: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* 기본 설정 */
+body {
+    font-family: "Arial", sans-serif;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 공유 버튼 스타일 */
+.share-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.share-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* 다이얼로그 스타일 */
+.copy-link-dialog {
+    display: none; /* 기본적으로 숨김 처리 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 다이얼로그 중앙 정렬 */
+    background: var(--bg-modal);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+/* 다이얼로그 활성화 상태 */
+.copy-link-dialog.active {
+    display: block;
+}
+
+/* 다이얼로그 제목 */
+.copy-link-dialog h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--text);
+}
+
+/* 입력 필드 스타일 */
+.copy-link-dialog input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; /* 박스 크기를 올바르게 계산 */
+}
+
+/* 버튼 컨테이너 정렬 */
+.copy-link-dialog .button-container {
+    display: flex;
+    justify-content: space-between; /* 버튼 간 간격을 균등 배치 */
+    align-items: center; /* 버튼 세로 정렬 */
+    gap: 10px; /* 버튼 사이의 간격 */
+}
+
+/* 버튼 스타일 */
+.copy-link-dialog button {
+    flex: 1; /* 버튼이 동일한 크기를 가지도록 설정 */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.copy-link-dialog button:hover {
+    background: var(--primary-hover);
+}
+
+/* 버튼 간격 및 균형 설정 */
+.copy-link-dialog .close-btn {
+    background: #ff4d4d; /* 닫기 버튼 색상 설정 */
+    margin-left: 10px; /* 버튼 사이 여백 */
+}
